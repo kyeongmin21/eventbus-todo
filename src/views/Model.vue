@@ -1,0 +1,74 @@
+<template>
+  <div class="model">
+    <h1 class="test">v-model:양방향 바인딩</h1>
+
+    <section class="first">
+      <h3>문자열</h3>
+      <input type="text" v-model="message" />
+      <span>메세지 : {{ message }}</span>
+    </section>
+
+    <section>
+      <h3>체크박스 : 하나의 체크박스는 단일 boolean 값을 가진다.</h3>
+      <input type="checkbox" id="check" v-model="checked" />
+      <label for="check">{{ checked }}</label>
+    </section>
+
+    <section>
+      <h3>여러개의 체크박스 : 같은 배열을 바인딩 할 수 있다.</h3>
+      <input type="checkbox" id="kim" value="Kim2" v-model="checkedNames" />
+      <label for="kim">Kim</label>
+      <input
+        type="checkbox"
+        id="kyeong"
+        value="Kyeong2"
+        v-model="checkedNames"
+      />
+      <label for="kyeong">Kyeong</label>
+      <input type="checkbox" id="min" value="Min2" v-model="checkedNames" />
+      <label for="min">Min</label>
+      <p>선택 : {{ checkedNames }}</p>
+      <p class="orange">input 안의 value값이 나오게 됨</p>
+    </section>
+
+    <section>
+      <h3>라디오</h3>
+      <input type="radio" id="one" value="one1" v-model="picked" />
+      <label for="one">One</label>
+      <input type="radio" id="two" value="two2" v-model="picked" />
+      <label for="two">Two</label>
+      <p>선택 : {{ picked }}</p>
+    </section>
+
+  </div>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      message: "",
+      checked: false,
+      checkedNames: [],
+      picked: "",
+    };
+  },
+};
+</script>
+
+<style lang="scss" scoped>
+@import "/css/style.css";
+h1 {
+  color: #42b983;
+}
+section.first {
+  border-top: 1px solid #333;
+}
+section {
+  border-bottom: 1px solid #333;
+  padding: 10px 0 20px 0;
+}
+.orange {
+  color: orange;
+}
+</style>
