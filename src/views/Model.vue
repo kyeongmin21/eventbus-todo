@@ -56,19 +56,6 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style>
 @import "/css/style.css";
-h1 {
-  color: #42b983;
-}
-section.first {
-  border-top: 1px solid #333;
-}
-section {
-  border-bottom: 1px solid #333;
-  padding: 10px 0 20px 0;
-}
-.orange {
-  color: orange;
-}
 </style>
