@@ -3,7 +3,7 @@
     <v-container>
       <v-flex xs12 text-center>
         <h1>Todo List</h1>
-        <p>전체할일 : {{ todoList.length }} / 
+        <p>전체할일 : {{ todoList.length }} /
           완료된 할일 : {{ countDone }} /
           남은 할일 : {{ todoList.length - countDone }}</p>
       </v-flex>
