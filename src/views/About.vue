@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <div id="nav">
-      <h2><router-link to="@/">1. Home</router-link></h2>
+      <h2><router-link to="/">1. Home</router-link></h2>
       <h2><router-link to="/about">2. About</router-link></h2>
       <h2><router-link to="/model">3. v-model</router-link></h2>
       <h2><router-link to="/if">4. v-if</router-link></h2>
