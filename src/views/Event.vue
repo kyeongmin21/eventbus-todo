@@ -18,8 +18,12 @@
     </section>
     <section>
       <button @click="isActive=!isActive">isActive 변경하기</button>
-      <p :class="{ child: isChild, 'is-active': isActive }" class="item">동적 클랙스</p>
-      <p :style="{ color: textColor, backgroundColor: bgColor }" class="item">동적 스타일</p>
+      <p class="item" :class="{ 'is-active': isActive }" >동적 클랙스</p>
+      <p class="item" :style="{ color: textColor, backgroundColor: bgColor }" >동적 스타일</p>
+
+      <button @click="isPerson = !isPerson">isPerson 변경하기</button>
+      <p class="name" :class="{ person: isPerson }">민경김</p>
+      <p class="name" :style="{ fontSize: size, fontWeight: weight}">김경민</p>
     </section>
   </div>
 </template>
@@ -41,7 +45,10 @@ export default {
       isChild: true,
       isActive: true,
       textColor: 'blue',
-      bgColor: 'lightgray'
+      bgColor: 'lightgray',
+      size: '30px',
+      weight: '600',
+      isPerson: false,
     };
   },
   methods: {
@@ -55,9 +62,13 @@ export default {
 
 <style scoped>
 @import "/css/style.css";
-
 .v-enter-active, .v-leave-active { transition: opacity 1s; }
 .v-enter, .v-leave-to { opacity: 0; }
-.item { padding: 4px 8px; transition: background-color 0.4s; }
+
+.item { transition: background-color 1s; padding: 4px 8px; } /* class에 걸어줌 */
 .is-active { background: #ffeaea;}
+
+.name { transition: color 1s; } /* class에 걸어줌 */
+.person { color: #42b983; }
+
 </style>
