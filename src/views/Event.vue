@@ -11,11 +11,15 @@
         <p v-if="show">Hello Vue.js!</p>
       </transition>
 
-
       <p>{{ message.value }}</p>
       <p>{{ message.value.length }}</p>
       <p>{{ list[2] }}</p>
       <p>{{ list[idx] }}</p>
+    </section>
+    <section>
+      <button @click="isActive=!isActive">isActive 변경하기</button>
+      <p :class="{ child: isChild, 'is-active': isActive }" class="item">동적 클랙스</p>
+      <p :style="{ color: textColor, backgroundColor: bgColor }" class="item">동적 스타일</p>
     </section>
   </div>
 </template>
@@ -33,7 +37,11 @@ export default {
         value: '고양이도 할 줄 아는 vue 는 거짓말이야!!!'
       },
       list: ['사과', '바나나', '딸기'],
-      idx: 1
+      idx: 1,
+      isChild: true,
+      isActive: true,
+      textColor: 'blue',
+      bgColor: 'lightgray'
     };
   },
   methods: {
@@ -48,11 +56,8 @@ export default {
 <style scoped>
 @import "/css/style.css";
 
-.v-enter-active, .v-leave-active {
-  transition: opacity 1s;
-}
-
-.v-enter, .v-leave-to {
-  opacity: 0;
-}
+.v-enter-active, .v-leave-active { transition: opacity 1s; }
+.v-enter, .v-leave-to { opacity: 0; }
+.item { padding: 4px 8px; transition: background-color 0.4s; }
+.is-active { background: #ffeaea;}
 </style>
