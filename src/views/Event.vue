@@ -12,6 +12,10 @@
       </transition>
 
 
+      <p>{{ message.value }}</p>
+      <p>{{ message.value.length }}</p>
+      <p>{{ list[2] }}</p>
+      <p>{{ list[idx] }}</p>
     </section>
   </div>
 </template>
@@ -25,6 +29,11 @@ export default {
     return {
       num: 0,
       show: true,
+      message: {
+        value: '고양이도 할 줄 아는 vue 는 거짓말이야!!!'
+      },
+      list: ['사과', '바나나', '딸기'],
+      idx: 1
     };
   },
   methods: {
