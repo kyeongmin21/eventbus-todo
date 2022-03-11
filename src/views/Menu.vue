@@ -9,6 +9,7 @@
       <h2><router-link to="/compo">6. component</router-link></h2>
       <h2><router-link to="/parent">7. parent</router-link></h2>
       <h2><router-link to="/page" tag="a">8. 페이지 이동</router-link></h2>
+      <h2><router-link to="/event" tag="a">9. 이벤트 핸들링</router-link></h2>
     </div>
   </div>
 </template>

@@ -45,6 +45,11 @@ const routes = [
     name: 'Page',
     component: () => import(/* webpackChunkName: "page" */ '@/views/PageMove.vue')
   },
+  {
+    path: '/event',
+    name: 'Event',
+    component: () => import(/* webpackChunkName: "event" */ '@/views/Event.vue')
+  },
 ]
 
 const router = new VueRouter({
