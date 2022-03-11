@@ -4,7 +4,14 @@
 
     <section class="first">
       <button @click="counter">버튼</button>
-      <p>위 버튼을 클릭한 횟수는 {{ num}} 번 입니다.</p>
+      <p>위 버튼을 클릭한 횟수는 {{ num }} 번 입니다.</p>
+
+      <button v-on:click="show =! show">변경하기</button>
+      <transition>
+        <p v-if="show">Hello Vue.js!</p>
+      </transition>
+
+
     </section>
   </div>
 </template>
@@ -13,22 +20,30 @@
 
 export default {
   name: "Event",
-  components: {
-
-  },
+  components: {},
   data() {
     return {
       num: 0,
+      show: true,
     };
   },
   methods: {
     counter() {
       this.num += 1;
-    }
+    },
+
   },
 };
 </script>
 
-<style>
+<style scoped>
 @import "/css/style.css";
+
+.v-enter-active, .v-leave-active {
+  transition: opacity 1s;
+}
+
+.v-enter, .v-leave-to {
+  opacity: 0;
+}
 </style>
