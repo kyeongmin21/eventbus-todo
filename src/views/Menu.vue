@@ -6,7 +6,7 @@
         <li><h2><router-link to="/if">2. v-if</router-link></h2></li>
         <li><h2><router-link to="/class">3. :class :style</router-link></h2></li>
         <li><h2><router-link to="/computed">4. Computed</router-link></h2></li>
-        <li><h2><router-link to="/class">5. Watch</router-link></h2></li>
+        <li><h2><router-link to="/watch">5. Watch</router-link></h2></li>
 
       </ul>
       <ul class="category">
