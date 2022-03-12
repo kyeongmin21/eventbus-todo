@@ -31,6 +31,16 @@ const routes = [
     component: () => import(/* webpackChunkName: "class" */ '@/views/Class.vue')
   },
   {
+    path: '/computed',
+    name: 'Computed',
+    component: () => import(/* webpackChunkName: "computed" */ '@/views/Computed.vue')
+  },
+  {
+    path: '/watch',
+    name: 'Watch',
+    component: () => import(/* webpackChunkName: "watch" */ '@/views/Watch.vue')
+  },
+  {
     path: '/compo',
     name: 'Compo',
     component: () => import(/* webpackChunkName: "compo" */ '@/views/Compo.vue')
