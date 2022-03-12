@@ -45,7 +45,6 @@ export default {
     return {
       num: 0,
       show: true,
-
       isChild: true,
       isActive: true,
       textColor: 'blue',
