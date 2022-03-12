@@ -10,21 +10,29 @@
       <transition>
         <p v-if="show">Hello Vue.js!</p>
       </transition>
-
-      <p>{{ message.value }}</p>
-      <p>{{ message.value.length }}</p>
-      <p>{{ list[2] }}</p>
-      <p>{{ list[idx] }}</p>
     </section>
+
     <section>
+      <p :class="{ hidden: isHidden}">클래스 바인딩 - 객체</p>
+      <p :class="[activeClass, errorClass]">클래스 바인딩 - 배열</p>
+
+      <p :style="{color: textColor, backgroundColor: bgColor }">스타일 바인딩 - 객체</p>
+      <div :style="[baseStyles, overridingStyles]">스타일 바인딩 - 배열</div>
+    </section>
+
+
+    <section>
+      <h2>예제</h2>
       <button @click="isActive=!isActive">isActive 변경하기</button>
       <p class="item" :class="{ 'is-active': isActive }" >동적 클랙스</p>
       <p class="item" :style="{ color: textColor, backgroundColor: bgColor }" >동적 스타일</p>
 
-      <button @click="isPerson = !isPerson">isPerson 변경하기</button>
-      <p class="name" :class="{ person: isPerson }">민경김</p>
-      <p class="name" :style="{ fontSize: size, fontWeight: weight}">김경민</p>
+      <button @click="isColor = !isColor">클릭하면 이름바뀐다</button>
+      <p class="name" :class="{ color: isColor}">김경민</p>
+      <p class="name" :style="{ fontSize: size, fontWeight: weight }">민경김</p>
     </section>
+
+
   </div>
 </template>
 
@@ -37,18 +45,26 @@ export default {
     return {
       num: 0,
       show: true,
-      message: {
-        value: '고양이도 할 줄 아는 vue 는 거짓말이야!!!'
-      },
-      list: ['사과', '바나나', '딸기'],
-      idx: 1,
+
       isChild: true,
       isActive: true,
       textColor: 'blue',
       bgColor: 'lightgray',
       size: '30px',
-      weight: '600',
-      isPerson: false,
+      weight: 600,
+      isColor: false,
+      isHidden: true,
+
+      activeClass: 'active',
+      errorClass: 'text-danger',
+
+      baseStyles: {
+        color: 'red'
+      },
+      overridingStyles: {
+        fontSize: '30px',
+        fontWeight: '700'
+      }
     };
   },
   methods: {
@@ -67,8 +83,6 @@ export default {
 
 .item { transition: background-color 1s; padding: 4px 8px; } /* class에 걸어줌 */
 .is-active { background: #ffeaea;}
-
-.name { transition: color 1s; } /* class에 걸어줌 */
-.person { color: #42b983; }
-
+.name { transition: color 1s; }
+.color { color: blue;  }
 </style>
