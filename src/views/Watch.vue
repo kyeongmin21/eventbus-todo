@@ -50,7 +50,6 @@ export default {
       console.log(newVal, oldVal); // 안녕히가세요 , 안녕하세요
       this.update = '아니오'
     },
-
     text(newVal) {
       let check = newVal.indexOf(this.forbiddenText);
       console.log('check', check >= 0)
@@ -59,7 +58,6 @@ export default {
         alert(`${this.forbiddenText} 는 입력할 수 없습니다.`)
       }
     },
-
     msg(newMsg) {
       console.log(`new data는 ${newMsg}`)
     },
@@ -67,7 +65,6 @@ export default {
       console.log(`new reversed는 ${newMsg}`)
     }
   },
-
 };
 </script>
 
