@@ -11,6 +11,11 @@
       <h3>금지어</h3>
       <textarea v-model="text" maxlength="140"></textarea>
     </section>
+
+    <section>
+      <p>{{ msg }}</p>
+      <p>{{ reversedMsg }}</p>
+    </section>
   </div>
 </template>
 
@@ -22,11 +27,22 @@ export default {
       update: '네',
       forbiddenText: '멍청이',
       text: '',
+      msg: 'Hello Vue!'
     };
   },
   methods: {
     changeMessage() {
       this.message = '안녕히가세요'
+    }
+  },
+  computed: {
+    reversedMsg: {
+      get() {
+        return this.msg.split('').reverse().join('')
+      },
+      set(newMsg) {
+        this.msg = newMsg
+      }
     }
   },
   watch: {
@@ -42,6 +58,13 @@ export default {
         this.text = newVal.replace(this.forbiddenText, '');
         alert(`${this.forbiddenText} 는 입력할 수 없습니다.`)
       }
+    },
+
+    msg(newMsg) {
+      console.log(`new data는 ${newMsg}`)
+    },
+    reversedMsg(newMsg) {
+      console.log(`new reversed는 ${newMsg}`)
     }
   },
 
