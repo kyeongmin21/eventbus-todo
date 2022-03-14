@@ -9,8 +9,8 @@
     </section>
     <section>
       <h3>v-for와 객체</h3>
-      <div v-for="value in object" :key="value">
-        {{ value }}
+      <div v-for="(value, key, index) in object" :key="value">
+        {{ value }}, {{ key }}, {{ index }}
       </div>
     </section>
   </div>
@@ -26,9 +26,9 @@ export default {
         { fruit: 'mango' }
       ],
       object: {
-        title: '제목입니다.',
-        menu: '메뉴입니다.',
-        button: '버튼입니다.'
+        title: '제목',
+        menu: '메뉴',
+        button: '버튼'
       }
     };
   },
