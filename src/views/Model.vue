@@ -43,9 +43,9 @@
     <section>
       <h3>코지코더</h3>
       <form @submit.prevent="submit">
-        <input type="text"><br>
+        <input type="text" :value="text" @keyup="updateText"><br>
         {{ text }}<br>
-        <button type="submit"></button>
+        <button type="submit">버튼이에오</button>
       </form>
     </section>
 
@@ -67,6 +67,9 @@ export default {
     submit() {
       alert('submitted');
       console.log('hello');
+    },
+    updateText(event) {
+      this.text = event.target.value
     }
   }
 };
