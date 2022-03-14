@@ -26,7 +26,9 @@ export default {
         { fruit: 'mango' }
       ],
       object: {
-
+        title: '제목입니다.',
+        menu: '메뉴입니다.',
+        button: '버튼입니다.'
       }
     };
   },
