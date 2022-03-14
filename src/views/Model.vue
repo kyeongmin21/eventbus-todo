@@ -40,6 +40,14 @@
       <p>선택 : {{ picked }}</p>
     </section>
 
+    <section>
+      <h3>코지코더</h3>
+      <form @submit.prevent="submit">
+        <input type="text"><br>
+        <button type="submit"></button>
+      </form>
+    </section>
+
   </div>
 </template>
 
