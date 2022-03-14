@@ -13,6 +13,10 @@
         {{ value }}, {{ key }}, {{ index }}
       </div>
     </section>
+    <section>
+      <h3>필터링 / 정렬 된 결과 표시하기</h3>
+      <li v-for="n in evenNumber" :key="n">{{ n }}</li>
+    </section>
   </div>
 </template>
 
@@ -29,8 +33,15 @@ export default {
         title: '제목',
         menu: '메뉴',
         button: '버튼'
-      }
+      },
+
+      number : [1, 2, 3, 4, 5]
     };
+  },
+  computed: {
+    evenNumber() {
+      return this.number.filter(n => n % 2 === 0)
+    }
   },
   methods: {
 
