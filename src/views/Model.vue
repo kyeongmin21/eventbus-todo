@@ -44,6 +44,7 @@
       <h3>코지코더</h3>
       <form @submit.prevent="submit">
         <input type="text"><br>
+        {{ text }}<br>
         <button type="submit"></button>
       </form>
     </section>
@@ -59,8 +60,15 @@ export default {
       checked: false,
       checkedNames: [],
       picked: "",
+      text: 'text'
     };
   },
+  methods: {
+    submit() {
+      alert('submitted');
+      console.log('hello');
+    }
+  }
 };
 </script>
 
