@@ -60,6 +60,11 @@ const routes = [
     name: 'Event',
     component: () => import(/* webpackChunkName: "event" */ '@/views/Event.vue')
   },
+  {
+    path: '/for',
+    name: 'For',
+    component: () => import(/* webpackChunkName: "for" */ '@/views/For.vue')
+  },
 ]
 
 const router = new VueRouter({
