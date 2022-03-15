@@ -8,9 +8,10 @@
       <button @click="minus">빼기</button>
     </section>
     <section>
-      <form @submit="submit">
+      <form @submit.prevent="submit">
         <input type="text">
         <button type="submit">버튼</button>
+        <p>@submit.prevent는 페이지 리로드 막는 이벤트</p>
       </form>
     </section>
     <section>
