@@ -57,6 +57,15 @@
       </form>
     </section>
 
+    <section>
+      <h3>인코딩 디코딩</h3>
+        <input type="text" v-model="memo"><br>
+
+        <input readonly :value="encode">
+        <button type="submit" @click="encoding">인코딩 버튼</button> <br>
+        <input readonly :value="decode">
+        <button type="submit" @click="decoding">디코딩 버튼</button>
+    </section>
 
   </div>
 </template>
@@ -70,7 +79,10 @@ export default {
       checkedNames: [],
       picked: "",
       text: 'text',
-      content: 'content'
+      content: 'content',
+      memo: '',
+      encode: '',
+      decode: ''
     };
   },
   methods: {
@@ -80,7 +92,13 @@ export default {
     },
     updateText(event) {
       this.text = event.target.value
-    }
+    },
+    encoding() {
+      this.encode = window.btoa(encodeURIComponent(this.memo))
+    },
+    decoding() {
+      this.decode = decodeURIComponent(window.atob(this.encode))
+    },
   }
 };
 </script>
