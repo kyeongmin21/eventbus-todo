@@ -15,6 +15,18 @@ const routes = [
     name: 'Menu',
     component: () => import(/* webpackChunkName: "menu" */ '@/views/Menu.vue')
   },
+
+
+  {
+    path: '/data',
+    name: 'Data',
+    component: () => import(/* webpackChunkName: "data" */ '@/views/Data.vue')
+  },
+  {
+    path: '/bind',
+    name: 'Bind',
+    component: () => import(/* webpackChunkName: "bind" */ '@/views/Bind.vue')
+  },
   {
     path: '/model',
     name: 'Model',
@@ -25,6 +37,13 @@ const routes = [
     name: 'If',
     component: () => import(/* webpackChunkName: "if" */ '@/views/If.vue')
   },
+  {
+    path: '/for',
+    name: 'For',
+    component: () => import(/* webpackChunkName: "for" */ '@/views/For.vue')
+  },
+
+
   {
     path: '/class',
     name: 'Class',
@@ -40,6 +59,7 @@ const routes = [
     name: 'Watch',
     component: () => import(/* webpackChunkName: "watch" */ '@/views/Watch.vue')
   },
+
   {
     path: '/compo',
     name: 'Compo',
@@ -60,11 +80,7 @@ const routes = [
     name: 'Event',
     component: () => import(/* webpackChunkName: "event" */ '@/views/Event.vue')
   },
-  {
-    path: '/for',
-    name: 'For',
-    component: () => import(/* webpackChunkName: "for" */ '@/views/For.vue')
-  },
+
 ]
 
 const router = new VueRouter({
