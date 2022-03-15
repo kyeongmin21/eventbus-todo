@@ -87,7 +87,6 @@ export default {
   },
   methods: {
     submit() {
-      alert('submitted');
       console.log('hello');
     },
     updateText(event) {
