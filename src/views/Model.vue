@@ -38,17 +38,12 @@
     </section>
 
     <section>
-      <h3>코지코더</h3>
+      <h3>코지코더 v-bind와 v-on을 통해 양방향</h3>
       <form @submit.prevent="submit">
         <input type="text" :value="text" @keyup="updateText"><br>
         {{ text }}<br>
         <button type="submit">버튼이에오</button>
       </form>
-    </section>
-
-    <section>
-      <h3>코지코더- 양방향 데이터</h3>
-        <input type="text" v-model="content"> {{ content }}
     </section>
 
     <section>
@@ -72,7 +67,6 @@ export default {
       checkedNames: [],
       picked: "",
       text: '',
-      content: '',
       memo: '',
       encode: '',
       decode: '',
