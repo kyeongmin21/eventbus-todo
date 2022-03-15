@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import ComponentButton from "../components/Button";
+import ComponentButton from "@/components/Button";
 export default {
   name: "Compo",
   components: {

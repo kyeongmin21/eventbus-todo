@@ -14,7 +14,9 @@
       <p v-show="true">True</p>
       <p v-show="false">False</p>
       <p class="orange">
-        v-show가 있는 엘리먼트는 항상 렌더링 되고 DOM에 남아있다
+        v-show가 있는 엘리먼트는 항상 렌더링 되고 DOM에 남아있다<br>
+        상태가 true false 가 계속해서 한 화면에 반복되는 경우에는 v-if의 경우 해당 태그를 <br>
+        그렸다가 지웠다 하기 때문에 v-show를 사용해 주는 것이 좋다!
       </p>
     </section>
   </div>
