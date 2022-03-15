@@ -1,9 +1,6 @@
 <template>
   <div>
-    <div>
-      {{ this.childValue }}
-    </div>
-
+    <div>{{ this.childValue }}</div>
     <button @click="updateParentValue">
       클릭시 부모의 데이터 값이 증가합니다.
     </button>
@@ -32,22 +29,6 @@ export default {
 };
 </script>
 
-<style lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-
-a {
-  color: #42b983;
-}
+<style>
+@import "/css/style.css";
 </style>
