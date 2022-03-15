@@ -3,44 +3,50 @@
     <h1>이벤트 핸들링</h1>
 
     <section class="first">
-      <button @click="counter">버튼</button>
-      <p>위 버튼을 클릭한 횟수는 {{ num }} 번 입니다.</p>
-
-      <button v-on:click="show =! show">변경하기</button>
+      <p>{{ year }}</p>
+      <button @click="plus">더하기</button>
+      <button @click="minus">빼기</button>
+    </section>
+    <section>
+      <form @submit="submit">
+        <input type="text">
+        <button type="submit">버튼</button>
+      </form>
+    </section>
+    <section>
+      <button @click="show =! show">변경하기</button>
       <transition>
         <p v-if="show">Hello Vue.js!</p>
       </transition>
     </section>
-
-
-
-
-
-
-
   </div>
 </template>
 
 <script>
-
 export default {
   name: "Event",
   components: {},
   data() {
     return {
-      num: 0,
+      year: 2022,
       show: true,
+
     };
   },
   methods: {
-    counter() {
-      this.num += 1;
+    plus() {
+      this.year += 1;
     },
-
+    minus() {
+      this.year -= 1;
+    },
+    submit() {
+      alert(`전송되었습니다`)
+    }
   },
 };
 </script>
 
-<style scoped>
+<style>
 @import "/css/style.css";
 </style>
