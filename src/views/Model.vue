@@ -94,7 +94,6 @@ export default {
       this.encode = window.btoa(encodeURIComponent(this.memo))
     },
     decoding() {
-      console.log(this.encode)
       this.decode = decodeURIComponent(window.atob(this.memo))
     },
   }
