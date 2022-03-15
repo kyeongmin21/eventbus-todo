@@ -18,16 +18,13 @@
       <h3>여러개의 체크박스 : 같은 배열을 바인딩 할 수 있다.</h3>
       <input type="checkbox" id="kim" value="Kim2" v-model="checkedNames" />
       <label for="kim">Kim</label>
-      <input
-        type="checkbox"
-        id="kyeong"
-        value="Kyeong2"
-        v-model="checkedNames"
-      />
+      <input type="checkbox" id="kyeong" value="Kyeong2" v-model="checkedNames"/>
       <label for="kyeong">Kyeong</label>
       <input type="checkbox" id="min" value="Min2" v-model="checkedNames" />
       <label for="min">Min</label>
       <p>선택 : {{ checkedNames }}</p>
+      <p>선택2: {{ check }}</p>
+
       <p class="orange">input 안의 value값이 나오게 됨</p>
     </section>
 
@@ -82,8 +79,13 @@ export default {
       content: 'content',
       memo: '',
       encode: '',
-      decode: ''
+      decode: '',
     };
+  },
+  computed: {
+    check() {
+      return this.checkedNames.join('')
+    }
   },
   methods: {
     submit() {
@@ -96,7 +98,8 @@ export default {
       this.encode = window.btoa(encodeURIComponent(this.memo))
     },
     decoding() {
-      this.decode = decodeURIComponent(window.atob(this.encode))
+      console.log(this.encode)
+      this.decode = decodeURIComponent(window.atob(this.memo))
     },
   }
 };
