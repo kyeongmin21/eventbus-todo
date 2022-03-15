@@ -45,19 +45,15 @@
         <button type="submit">버튼이에오</button>
       </form>
     </section>
+
     <section>
       <h3>코지코더- 양방향 데이터</h3>
-      <form @submit.prevent="submit">
-        <input type="text" v-model="content"><br>
-        {{ content }}<br>
-        <button type="submit">버튼이에오</button>
-      </form>
+        <input type="text" v-model="content"> {{ content }}
     </section>
 
     <section>
       <h3>인코딩 디코딩</h3>
         <input type="text" v-model="memo"><br>
-
         <input readonly :value="encode">
         <button type="submit" @click="encoding">인코딩 버튼</button> <br>
         <input readonly :value="decode">
@@ -75,8 +71,8 @@ export default {
       checked: false,
       checkedNames: [],
       picked: "",
-      text: 'text',
-      content: 'content',
+      text: '',
+      content: '',
       memo: '',
       encode: '',
       decode: '',
