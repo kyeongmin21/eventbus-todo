@@ -6,6 +6,7 @@
       <h3>v-if</h3>
       <p v-if="awesome">True일 때 보여짐</p>
       <p v-else>False일 때 보여짐</p>
+      <button @click="toggleShow">버튼</button>
       <p class="orange">false일 때 : html 렌더링 안 됨</p>
     </section>
 
@@ -29,6 +30,11 @@ export default {
       awesome: true,
     };
   },
+  methods: {
+    toggleShow() {
+      this.awesome = !this.awesome
+    }
+  }
 };
 </script>
 
