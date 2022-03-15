@@ -17,13 +17,13 @@ export default {
   },
   data() {
     return {
-      lll: this.childValue,
+      num: this.childValue,
     };
   },
   methods: {
     updateParentValue() {
-      this.lll = 1;
-      this.$emit("childEvent", this.lll);
+      this.num = 1;
+      this.$emit("childEvent", this.num);
     },
   },
 };
