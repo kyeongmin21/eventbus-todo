@@ -18,6 +18,7 @@
       <ul class="category">
         <li><h2><router-link to="/page">9. 페이지 이동</router-link></h2></li>
         <li><h2><router-link to="/event">10. event</router-link></h2></li>
+        <li><h2><router-link to="/slot">11. slot</router-link></h2></li>
       </ul>
     </div>
   </div>
