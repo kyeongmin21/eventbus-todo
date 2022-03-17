@@ -1,12 +1,22 @@
 <template>
   <div>
     <h1>slot</h1>
-    <Button/>
+    <section>
+      <h3>기본 사용 예시</h3>
+      <Button>slot content</Button>
+      <!--<Button/>-->
+    </section>
+
+    <section>
+      <h3>이름이 있는 슬롯</h3>
+    </section>
   </div>
 </template>
 
 <script>
 import Button from "@/components/Button"
+
+
 export default {
   data() {
     return {
@@ -15,10 +25,9 @@ export default {
   },
   components: {
     Button,
-  },
-  methods: {
 
-  }
+  },
+
 };
 </script>
 
