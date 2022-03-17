@@ -10,8 +10,11 @@
     <section>
       <h3>이름이 있는 슬롯</h3>
       <SlotChild>
-        <template #header>
-          <p>헤더 Slot</p>
+        <template #header="person" >
+          <p>헤더 Slot {{ person.nickName}}</p>
+        </template>
+        <template #header="{ nickName }" >
+          <p>헤더 Slot2 {{ nickName }}</p>
         </template>
         <template v-slot:body>
           <p>바디 Slot</p>
@@ -19,7 +22,7 @@
         <template v-slot:footer>
           <p>푸터 Slot</p>
         </template>
-        <template v-slot:default>
+        <template v-slot:default >
           default
         </template>
       </SlotChild>
@@ -32,10 +35,6 @@
 import Button from "@/components/Button"
 import SlotChild from "@/components/SlotChild"
 export default {
-  data() {
-    return {
-    };
-  },
   components: {
     Button,
     SlotChild
