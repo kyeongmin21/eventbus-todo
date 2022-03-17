@@ -85,7 +85,11 @@ const routes = [
     name: 'Slot',
     component: () => import(/* webpackChunkName: "slot" */ '@/views/Slot.vue')
   },
-
+  {
+    path: '/lifecycle',
+    name: 'LifeCycle',
+    component: () => import(/* webpackChunkName: "lifecycle" */ '@/views/LifeCycle.vue')
+  },
 ]
 
 const router = new VueRouter({
