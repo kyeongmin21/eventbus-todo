@@ -10,7 +10,7 @@
     <section>
       <h3>이름이 있는 슬롯</h3>
       <SlotChild>
-        <template v-slot:header>
+        <template #header>
           <p>헤더 Slot</p>
         </template>
         <template v-slot:body>
@@ -18,6 +18,9 @@
         </template>
         <template v-slot:footer>
           <p>푸터 Slot</p>
+        </template>
+        <template v-slot:default>
+          default
         </template>
       </SlotChild>
 
