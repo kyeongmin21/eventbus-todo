@@ -1,18 +1,19 @@
 <template>
   <div>
+    버튼이름 :
+    <button @click="onClick()">{{ btn }}</button><br>
 
-      버튼이름 :
-      <button @click="onClick()">{{ btn }}</button>
-      <br>
-
-      Emit: 입력
-      <input type="text" v-model="value" />
-      <button @click="onEmit">{{ name }} Emit 버튼이야~~~</button>
+    Emit: 입력
+    <input type="text" v-model="value"/>
+    <button @click="onEmit">{{ name }} Emit 버튼이야~~~</button>
 
     <section>
-      <button slot="left">왼쪽버튼</button>
-      <button slot="right">오른쪽버튼</button>
-
+      <p>header</p>
+      <slot name="header"></slot>
+      <p>body</p>
+      <slot name="body"></slot>
+      <p>footer</p>
+      <slot name="footer"></slot>
     </section>
   </div>
 </template>
@@ -31,8 +32,7 @@ export default {
       value: "",
     };
   },
-  components: {
-  },
+  components: {},
   methods: {
     onClick() {
       console.log("공통버튼 클릭");
@@ -49,14 +49,17 @@ export default {
 h3 {
   margin: 40px 0 0;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
 }
+
 li {
   display: inline-block;
   margin: 0 10px;
 }
+
 a {
   color: #42b983;
 }
