@@ -16,7 +16,7 @@ export default {
   name: 'SlotChild',
   data() {
     return {
-      name: 'min'를
+      name: 'min',
     }
   }
 }
