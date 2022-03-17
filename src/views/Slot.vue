@@ -9,7 +9,7 @@
 
     <section>
       <h3>이름이 있는 슬롯</h3>
-      <Button>
+      <SlotChild>
         <template v-slot:header>
           <p>헤더 Slot</p>
         </template>
@@ -19,14 +19,15 @@
         <template v-slot:footer>
           <p>푸터 Slot</p>
         </template>
-      </Button>
+      </SlotChild>
 
     </section>
   </div>
 </template>
 
 <script>
-import Button from "@/components/Button.vue"
+import Button from "@/components/Button"
+import SlotChild from "@/components/SlotChild"
 export default {
   data() {
     return {
@@ -34,6 +35,7 @@ export default {
   },
   components: {
     Button,
+    SlotChild
   },
 };
 </script>

@@ -6,15 +6,6 @@
     Emit: 입력
     <input type="text" v-model="value"/>
     <button @click="onEmit">{{ name }} Emit 버튼이야~~~</button>
-
-    <section>
-      <p>header</p>
-      <slot name="header"></slot>
-      <p>body</p>
-      <slot name="body"></slot>
-      <p>footer</p>
-      <slot name="footer"></slot>
-    </section>
   </div>
 </template>
 
