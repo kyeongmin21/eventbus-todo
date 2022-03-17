@@ -9,7 +9,11 @@
       <input type="text" v-model="value" />
       <button @click="onEmit">{{ name }} Emit 버튼이야~~~</button>
 
+    <section>
+      <button slot="left">왼쪽버튼</button>
+      <button slot="right">오른쪽버튼</button>
 
+    </section>
   </div>
 </template>
 
@@ -26,6 +30,8 @@ export default {
       btn: "공통 버튼 클릭",
       value: "",
     };
+  },
+  components: {
   },
   methods: {
     onClick() {
