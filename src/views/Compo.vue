@@ -25,7 +25,8 @@ export default {
   methods: {
     setInput(value, text) {
       this.value = value;
-      console.log("자식 컴포넌트에게 값을 받았어요 :", value, text);
+      this.text = text;
+      console.log("자식 컴포넌트게 값을 받음:", value, text);
     },
   },
 };
