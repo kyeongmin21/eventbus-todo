@@ -1,11 +1,9 @@
 <template>
   <div>
-    버튼이름 :
     <button @click="onClick()">{{ btn }}</button><br>
 
-    Emit: 입력
     <input type="text" v-model="value"/>
-    <button @click="onEmit">{{ name }} Emit 버튼이야~~~</button>
+    <button @click="onEmit">{{ name }} : 부모 전달값 버튼</button>
   </div>
 </template>
 
