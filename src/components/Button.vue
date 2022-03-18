@@ -3,7 +3,7 @@
     <button @click="onClick()">{{ btn }}</button><br>
 
     <input type="text" v-model="value"/>
-    <button @click="onEmit">{{ name }} : 부모 전달값 버튼</button>
+    <button @click="onEmit">{{ print }} : 부모 전달값 버튼</button>
   </div>
 </template>
 
@@ -11,9 +11,7 @@
 export default {
   name: "ComponentButton",
   props: {
-    // 먼저 아래와 같이 props로 받은 정보가 어떤 자료형인지 정의합니다.
-    // 정의한 경우 정의된 자료형과 다른 자료형의 데이터가 들어오면 warning을 console에 띄웁니다.
-    name: String,
+    print: String,
   },
   data() {
     return {
@@ -21,7 +19,6 @@ export default {
       value: "",
     };
   },
-  components: {},
   methods: {
     onClick() {
       console.log("공통버튼 클릭");

@@ -2,11 +2,9 @@
   <div class="parent">
     <h1>부모컨포넌트</h1>
 
-    <section class="first">
       하위 컴포넌트에 데이터 값을 알려줍니다.
       <ChildComponent :childValue="parentValue" @childEvent="updateParentValue">
       </ChildComponent>
-    </section>
   </div>
 </template>
 

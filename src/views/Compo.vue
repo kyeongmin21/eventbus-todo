@@ -2,7 +2,7 @@
   <div>
     <h1>컴포넌트 연결 / props, emit</h1>
 
-    <ComponentButton name="parentText" @setInput="setInput">
+    <ComponentButton print="parentText" @setInput="setInput">
       자식에게 받은 데이터: {{ value }}
     </ComponentButton>
 
@@ -13,7 +13,7 @@
 import ComponentButton from "@/components/Button";
 
 export default {
-  name: '',
+  name: 'Compo',
   components: {
     ComponentButton,
   },
