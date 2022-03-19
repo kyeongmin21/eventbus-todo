@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>props, emit</h1>
-    <Emit title="타이틀입니다."></Emit>
+    <Emit title="타이틀입니다." :content="cont"></Emit>
   </div>
 </template>
 
@@ -15,7 +15,7 @@ export default {
   },
   data() {
     return {
-
+      cont: '내용입니다.'
     };
   },
   methods: {
