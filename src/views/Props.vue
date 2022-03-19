@@ -4,6 +4,7 @@
     <Emit title="타이틀입니다." :content="cont"></Emit>
     <form>
       <InputFiled :name="name" @update-name="update"></InputFiled>
+<!--      <InputFiled :name="name" @update-name="name = $event.target.value"></InputFiled>-->
       <button>submit</button>
     </form>
     {{ name }}

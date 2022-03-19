@@ -4,6 +4,9 @@
     <input id="person" type="text"
            :value="name"
             @input="updateName">
+<!--    <input id="person" type="text"
+           :value="name"
+           @input="$emit('update-name', $event)">-->
   </div>
 </template>
 
