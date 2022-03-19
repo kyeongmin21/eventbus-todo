@@ -90,6 +90,11 @@ const routes = [
     name: 'LifeCycle',
     component: () => import(/* webpackChunkName: "lifecycle" */ '@/views/LifeCycle.vue')
   },
+  {
+    path: '/props',
+    name: 'Props',
+    component: () => import(/* webpackChunkName: "props" */ '@/views/Props.vue')
+  },
 ]
 
 const router = new VueRouter({
