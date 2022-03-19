@@ -1,6 +1,6 @@
 <template>
   <div>
-
+      <h3>{{ title }}</h3>
   </div>
 </template>
 
@@ -8,7 +8,10 @@
 export default {
   name: "Emit",
   props: {
-
+    title: {
+      type: String,
+      required: true
+    }
   },
   data() {
     return {

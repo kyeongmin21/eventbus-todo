@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>props, emit</h1>
-    <Emit></Emit>
+    <Emit title="타이틀입니다."></Emit>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
 import Emit from "@/components/Emit";
 
 export default {
-  name: 'Compo',
+  name: 'Props',
   components: {
     Emit,
   },
