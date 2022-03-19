@@ -1,7 +1,7 @@
 <template>
   <div>
     <button @click="onClick()">{{ btn }}</button><br>
-
+    <p>{{ title }}</p>
     <input type="text" v-model="value"/>
     <button @click="onEmit">{{ print }} : 부모 전달값 버튼</button>
   </div>
@@ -11,6 +11,7 @@
 export default {
   name: "ComponentButton",
   props: {
+    title: String,
     print: String,
   },
   data() {

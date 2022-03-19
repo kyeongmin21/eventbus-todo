@@ -2,8 +2,11 @@
   <div>
     <h1>컴포넌트 연결 / props, emit</h1>
 
-    <ComponentButton print="parentText" @setInput="setInput">
+    <ComponentButton print="parentText"
+                     title="타이틀"
+                     @setInput="setInput" >
       자식에게 받은 데이터: {{ value }}
+
     </ComponentButton>
 
   </div>
