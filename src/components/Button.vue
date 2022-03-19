@@ -11,7 +11,10 @@
 export default {
   name: "ComponentButton",
   props: {
-    title: String,
+    title: {
+      type: String,
+      required: true  // 무조건 보내줘라
+    },
     print: String,
   },
   data() {
