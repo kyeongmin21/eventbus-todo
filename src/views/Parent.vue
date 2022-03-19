@@ -9,11 +9,11 @@
 </template>
 
 <script>
-import ChildComponent from "@/components/ChildComponent";
+import Child from "@/components/Child";
 export default {
   name: "Parent",
   components: {
-    ChildComponent,
+    Child,
   },
   data() {
     return {
