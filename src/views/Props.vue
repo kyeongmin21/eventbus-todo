@@ -14,7 +14,6 @@
 <script>
 import Emit from "@/components/Emit";
 import InputFiled from "@/components/InputField";
-
 export default {
   name: 'Props',
   components: {
