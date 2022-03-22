@@ -95,6 +95,11 @@ const routes = [
     name: 'Props',
     component: () => import(/* webpackChunkName: "props" */ '@/views/Props.vue')
   },
+  {
+    path: '/board',
+    name: 'Board',
+    component: () => import(/* webpackChunkName: "board" */ '@/views/Board.vue')
+  },
 ]
 
 const router = new VueRouter({

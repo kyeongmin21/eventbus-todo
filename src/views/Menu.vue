@@ -16,11 +16,14 @@
         <li><h2><router-link to="/parent">10. parent</router-link></h2></li>
       </ul>
       <ul class="category">
-        <li><h2><router-link to="/page">9. 페이지 이동</router-link></h2></li>
-        <li><h2><router-link to="/event">10. event</router-link></h2></li>
-        <li><h2><router-link to="/slot">11. slot</router-link></h2></li>
-        <li><h2><router-link to="/lifecycle">12. LifeCycle</router-link></h2></li>
-        <li><h2><router-link to="/props">13. Props</router-link></h2></li>
+        <li><h2><router-link to="/page">11. 페이지 이동</router-link></h2></li>
+        <li><h2><router-link to="/event">12. event</router-link></h2></li>
+        <li><h2><router-link to="/slot">13. slot</router-link></h2></li>
+        <li><h2><router-link to="/lifecycle">14. LifeCycle</router-link></h2></li>
+        <li><h2><router-link to="/props">15. Props</router-link></h2></li>
+      </ul>
+      <ul class="category">
+        <li><h2><router-link to="/board">16. 연습판</router-link></h2></li>
       </ul>
     </div>
   </div>

@@ -3,7 +3,7 @@
     <h1>부모컨포넌트</h1>
 
       하위 컴포넌트에 데이터 값을 알려줍니다.
-      <Child :childValue="parentValue" @childEvent="updateParentValue">
+      <Child :childValue="parentValue" @childEvent="update">
       </Child>
   </div>
 </template>
@@ -21,9 +21,9 @@ export default {
     };
   },
   methods: {
-    updateParentValue(value) {
+    update() {
       this.parentValue += 1;
-      console.log(value);
+      // console.log(value);
     },
   },
 };
