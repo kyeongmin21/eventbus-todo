@@ -5,7 +5,7 @@
 
     <section>
       <button @click="count">
-        버튼
+        중복클릭 방지
       </button>
     </section>
   </div>
