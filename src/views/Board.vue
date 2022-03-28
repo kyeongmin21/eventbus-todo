@@ -4,7 +4,9 @@
     <BoardChild :num="number"
                 @up="update"
                 :human="person"
-                @reverse="reverseName">
+                @reverse="reverseName"
+                :bool="ttff"
+                @onoff="flag">
 
     </BoardChild>
   </div>
@@ -21,7 +23,8 @@ export default {
   data() {
     return {
       number: 1,
-      person: '김경민'
+      person: '김경민',
+      ttff: true
     };
   },
   methods: {
@@ -30,6 +33,9 @@ export default {
     },
     reverseName(value) {
       this.person = value.split('').reverse().join('')
+    },
+    flag(value) {
+      this.ttff = !value
     }
   },
 };
