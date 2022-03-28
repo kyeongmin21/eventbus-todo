@@ -4,9 +4,7 @@
     <BoardChild :num="number" @up="update"></BoardChild>
 
     <section>
-      <button @click="count">
-        중복클릭 방지
-      </button>
+      <button @click="dbClickPrevent">중복클릭 방지</button>
     </section>
   </div>
 </template>
@@ -22,17 +20,17 @@ export default {
   data() {
     return {
       number: 1,
-      flag: false
+      dbClick: false
     };
   },
   methods: {
     update() {
       this.number += 1
     },
-    count() {
-      if (!this.flag) {
+    dbClickPrevent() {
+      if (!this.dbClick) {
         console.log('클릭')
-        this.flag = true
+        this.dbClick = true
       }
     }
 
