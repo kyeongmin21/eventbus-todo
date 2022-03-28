@@ -4,7 +4,8 @@
     <BoardChild :num="number" @up="update"></BoardChild>
 
     <section>
-      <button @click="dbClickPrevent">중복클릭 방지</button>
+      <button @click="dbClickPrevent">중복클릭 방지</button><br>
+      <button @click.once="onlyOne">중복클릭 방지2</button>
     </section>
   </div>
 </template>
@@ -32,6 +33,9 @@ export default {
         console.log('클릭')
         this.dbClick = true
       }
+    },
+    onlyOne(){
+      console.log('클릭2')
     }
 
   },
