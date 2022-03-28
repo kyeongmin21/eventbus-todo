@@ -1,7 +1,11 @@
 <template>
   <div>
     <h1>board</h1>
-    <BoardChild :num="number" @up="update"></BoardChild>
+    <BoardChild :num="number"
+                @up="update"
+                :human="person">
+
+    </BoardChild>
   </div>
 </template>
 
@@ -16,6 +20,7 @@ export default {
   data() {
     return {
       number: 1,
+      person: '김경민'
     };
   },
   methods: {

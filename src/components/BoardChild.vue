@@ -1,7 +1,9 @@
 <template>
   <div>
-      <div>{{ num }}</div>
-      <button @click="update"> 버튼 </button>
+    <div>{{ num }}</div>
+    <button @click="update"> 버튼</button>
+    <br><br>
+    <div>{{ human }}</div>
   </div>
 </template>
 
@@ -9,12 +11,11 @@
 export default {
   name: "BoardChild",
   props: {
-    num: Number
+    num: Number,
+    human: String,
   },
   data() {
-    return {
-
-    };
+    return {};
   },
   methods: {
     update() {
