@@ -4,6 +4,9 @@
     <button @click="updateParentValue">
       클릭시 부모의 데이터 값이 증가합니다.
     </button>
+
+    <div>공부{{ study }}</div>
+    <button @click="changeText">버튼</button>
   </div>
 </template>
 
@@ -14,6 +17,9 @@ export default {
     childValue: {
       type: Number,
     },
+    study: {
+      type: String,
+    }
   },
   data() {
     return {
@@ -25,6 +31,9 @@ export default {
       this.num = 1;
       this.$emit("childEvent", this.num);
     },
+    changeText() {
+      this.$emit('chageText')
+    }
   },
 };
 </script>
