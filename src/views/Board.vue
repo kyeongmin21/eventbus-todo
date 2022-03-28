@@ -2,6 +2,12 @@
   <div>
     <h1>board</h1>
     <BoardChild :num="number" @up="update"></BoardChild>
+
+    <section>
+      <button @click="count">
+        버튼
+      </button>
+    </section>
   </div>
 </template>
 
@@ -15,13 +21,21 @@ export default {
   },
   data() {
     return {
-        number: 1
+      number: 1,
+      flag: false
     };
   },
   methods: {
     update() {
       this.number += 1
+    },
+    count() {
+      if (!this.flag) {
+        console.log('클릭')
+        this.flag = true
+      }
     }
+
   },
 };
 </script>

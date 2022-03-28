@@ -16,6 +16,8 @@
       <p>{{ msg }}</p>
       <p>{{ reversedMsg }}</p>
     </section>
+
+
   </div>
 </template>
 
@@ -27,7 +29,8 @@ export default {
       update: '네',
       forbiddenText: '멍청이',
       text: '',
-      msg: 'Hello Vue!'
+      msg: 'Hello Vue!',
+
     };
   },
   methods: {
@@ -63,7 +66,8 @@ export default {
     },
     reversedMsg(newMsg) {
       console.log(`new reversed는 ${newMsg}`)
-    }
+    },
+
   },
 };
 </script>
