@@ -1,10 +1,10 @@
 <template>
   <div>
     <div>{{ num }}</div>
-    <button @click="update"> 버튼</button>
+    <button @click="update">숫자 증가 버튼</button>
     <br><br>
     <div>{{ human }}</div>
-    <button @click="reverseName">버튼</button>
+    <button @click="reverseName">이름 뒤집기 버튼</button>
   </div>
 </template>
 
