@@ -19,11 +19,12 @@ export default {
   },
   beforeMount() {
     console.log('beforeMount')
-    alert('beforeMount')
+  },
+  update() {
+    console.log('업데이트')
   },
   mounted() {
     console.log('mounted')
-    alert('mounted')
   },
   beforeDestroy() {
     alert('beforeDestroy')

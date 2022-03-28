@@ -5,7 +5,7 @@
 
     <section>
       <button @click="dbClickPrevent">중복클릭 방지</button><br>
-      <button @click.once="onlyOne">중복클릭 방지2</button>
+      <button @click.once="onlyOne">중복클릭 방지2</button><br>
     </section>
   </div>
 </template>
@@ -21,7 +21,7 @@ export default {
   data() {
     return {
       number: 1,
-      dbClick: false
+      dbClick: false,
     };
   },
   methods: {
@@ -36,7 +36,8 @@ export default {
     },
     onlyOne(){
       console.log('클릭2')
-    }
+    },
+
 
   },
 };
