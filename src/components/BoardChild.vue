@@ -9,9 +9,7 @@
 export default {
   name: "BoardChild",
   props: {
-    num: {
-      type: Number
-    }
+    num: Number
   },
   data() {
     return {

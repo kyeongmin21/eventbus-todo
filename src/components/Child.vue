@@ -17,13 +17,14 @@ export default {
     childValue: {
       type: Number,
     },
-    study: {
-      type: String,
+    text: {
+      type: String
     }
   },
   data() {
     return {
       num: this.childValue,
+      study:this.text
     };
   },
   methods: {
@@ -32,7 +33,8 @@ export default {
       this.$emit("childEvent", this.num);
     },
     changeText() {
-      this.$emit('chageText')
+      this.study = '안할래'
+      this.$emit('change', this.study)
     }
   },
 };
