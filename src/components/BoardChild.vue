@@ -4,6 +4,7 @@
     <button @click="update"> 버튼</button>
     <br><br>
     <div>{{ human }}</div>
+    <button @click="reverseName">버튼</button>
   </div>
 </template>
 
@@ -20,6 +21,9 @@ export default {
   methods: {
     update() {
       this.$emit('up', this.num)
+    },
+    reverseName() {
+      this.$emit('reverse', this.human)
     }
   },
 };

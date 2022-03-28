@@ -3,7 +3,8 @@
     <h1>board</h1>
     <BoardChild :num="number"
                 @up="update"
-                :human="person">
+                :human="person"
+                @reverse="reverseName">
 
     </BoardChild>
   </div>
@@ -27,6 +28,9 @@ export default {
     update() {
       this.number += 1
     },
+    reverseName(value) {
+      this.person = value.split('').reverse().join('')
+    }
   },
 };
 </script>
