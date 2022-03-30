@@ -1,15 +1,10 @@
 <template>
   <div>
     <h1>board</h1>
-    <BoardChild :num="number"
-                @up="update"
-                :human="person"
-                @reverse="reverseName"
-                :bool="trueFalse"
-                @onOff="flag"
-                :str="string"
-                @pushEvent="push">
-
+    <BoardChild :num="number" @up="update"
+                :human="person" @reverse="reverseName"
+                :bool="trueFalse" @onOff="flag"
+                :str="string" @pushEvent="push">
     </BoardChild>
   </div>
 </template>
