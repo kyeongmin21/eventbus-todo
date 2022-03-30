@@ -5,8 +5,8 @@
                 @up="update"
                 :human="person"
                 @reverse="reverseName"
-                :bool="ttff"
-                @onoff="flag"
+                :bool="trueFalse"
+                @onOff="flag"
                 :str="string"
                 @pushEvent="push">
 
@@ -26,7 +26,7 @@ export default {
     return {
       number: 1,
       person: '김경민',
-      ttff: true,
+      trueFalse: true,
       string: '뷰공부'
     };
   },
@@ -38,7 +38,7 @@ export default {
       this.person = value.split('').reverse().join('')
     },
     flag(value) {
-      this.ttff = !value
+      this.trueFalse = !value
     },
     push(value) {
       value = '뷰공부합니다.'
