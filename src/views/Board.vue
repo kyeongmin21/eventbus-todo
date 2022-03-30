@@ -7,7 +7,8 @@
                 @reverse="reverseName"
                 :bool="ttff"
                 @onoff="flag"
-                :str="string">
+                :str="string"
+                @pushEvent="push">
 
     </BoardChild>
   </div>
@@ -38,6 +39,10 @@ export default {
     },
     flag(value) {
       this.ttff = !value
+    },
+    push(value) {
+      value = '뷰공부합니다.'
+      this.string = value
     }
   },
 };
