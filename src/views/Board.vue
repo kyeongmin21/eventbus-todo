@@ -6,6 +6,8 @@
                 :bool="trueFalse" @onOff="flag"
                 :str="string" @pushEvent="push">
     </BoardChild>
+
+    <div :class="objClass">www.naver.com</div>
   </div>
 </template>
 
@@ -22,7 +24,12 @@ export default {
       number: 1,
       person: '김경민',
       trueFalse: true,
-      string: '뷰공부'
+      string: '뷰공부',
+
+      objClass: {
+        red: true,
+        bold: true
+      }
     };
   },
   methods: {
@@ -45,4 +52,13 @@ export default {
 
 <style>
 @import "/css/style.css";
+
+.bold {
+  font-weight: bold;
+}
+
+.red {
+  color: red;
+}
+
 </style>
