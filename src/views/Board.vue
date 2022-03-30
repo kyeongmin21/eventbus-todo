@@ -6,7 +6,8 @@
                 :human="person"
                 @reverse="reverseName"
                 :bool="ttff"
-                @onoff="flag">
+                @onoff="flag"
+                :str="string">
 
     </BoardChild>
   </div>
@@ -24,7 +25,8 @@ export default {
     return {
       number: 1,
       person: '김경민',
-      ttff: true
+      ttff: true,
+      string: '뷰공부'
     };
   },
   methods: {
