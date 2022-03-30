@@ -80,5 +80,6 @@ export default {
 
 <style>
 @import "/css/style.css";
-
+.active { text-decoration: underline;}
+.text-danger {color: green;}
 </style>

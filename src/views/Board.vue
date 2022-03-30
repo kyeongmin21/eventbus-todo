@@ -7,7 +7,7 @@
                 :str="string" @pushEvent="push">
     </BoardChild>
 
-    <div :class="objClass">www.naver.com</div>
+    <div :class="[ activeClass, lineClass ]">www.naver.com</div>
   </div>
 </template>
 
@@ -26,10 +26,8 @@ export default {
       trueFalse: true,
       string: '뷰공부',
 
-      objClass: {
-        red: true,
-        bold: true
-      }
+      activeClass: 'active',
+      lineClass: 'underLine'
     };
   },
   methods: {
@@ -53,12 +51,7 @@ export default {
 <style>
 @import "/css/style.css";
 
-.bold {
-  font-weight: bold;
-}
-
-.red {
-  color: red;
-}
+.active { color: red; }
+.underLine { text-decoration: underline; }
 
 </style>
