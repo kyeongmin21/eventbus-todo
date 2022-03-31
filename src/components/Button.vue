@@ -12,7 +12,7 @@ export default {
   props: {
     title: {
       type: String,
-      required: true  // 무조건 보내줘라
+      required: false  // ture면 무조건 보내줘라
     },
   },
   data() {
