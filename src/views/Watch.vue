@@ -20,7 +20,7 @@
     <section>
       <p>{{ count }}</p>
       <p>{{ print }}</p>
-      <button @click="count">카운트 감소</button>
+      <button @click="count --">카운트 감소</button>
     </section>
 
 
@@ -76,7 +76,11 @@ export default {
       // computed -> msgReversed 데이터가 변경될 때 실행
       console.log(`new reversed는 ${newMsg}`)
     },
-
+    count(newVal, oldVal) {
+      this.count -= 1
+      console.log(this.count)
+      this.print = `${oldVal}에서 ${newVal}로 바뀌었습니다.`
+    }
   },
 };
 </script>
