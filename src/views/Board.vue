@@ -6,8 +6,8 @@
                 :bool="trueFalse" @onOff="flag"
                 :str="string" @pushEvent="push">
     </BoardChild>
-
-    <div :style="[ activeClass, lineClass ]">www.naver.com</div>
+    <br>
+    <span :class="classObject">www.naver.com</span>
   </div>
 </template>
 
@@ -25,14 +25,16 @@ export default {
       person: '김경민',
       trueFalse: true,
       string: '뷰공부',
-
-      activeClass: {
-        color: 'blue'
-      },
-      lineClass: {
-        'text-decoration': 'underline'
-      }
+      isRed: false,
     };
+  },
+  computed: {
+    classObject() {
+      return {
+        red: this.isRed,
+        green: !this.isRed
+      }
+    }
   },
   methods: {
     update() {
@@ -53,11 +55,12 @@ export default {
 </script>
 
 <style>
-@import "/css/style.css";
 
-.active { color: red; }
-.underLine { text-decoration: underline; }
+.red { color: red; }
+.green { color: green; }
 
-.color { color: blue;}
+
+.colorAtt { color: red; }
+.weight { font-weight: 600; }
 
 </style>
