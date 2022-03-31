@@ -61,9 +61,11 @@ export default {
       }
     },
     msg(newMsg) {
+      // data -> msg 데이터가 변경될 때 실행
       console.log(`new data는 ${newMsg}`)
     },
     reversedMsg(newMsg) {
+      // computed -> msgReversed 데이터가 변경될 때 실행
       console.log(`new reversed는 ${newMsg}`)
     },
 
