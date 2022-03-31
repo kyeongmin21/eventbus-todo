@@ -18,9 +18,9 @@
     </section>
 
     <section>
-      <p>{{ count }}</p>
-      <p>{{ print }}</p>
-      <button @click="count --">카운트 감소</button>
+      <p>value = {{ value }}</p>
+      <p>changeValue = {{ changeValue }}</p>
+      <button @click="change">변경</button>
     </section>
 
 
@@ -36,13 +36,16 @@ export default {
       forbiddenText: '멍청이',
       text: '',
       msg: 'Hello Vue!',
-      count: 3,
-      print: '변경전입니다.'
+      value: 0,
+      changeValue: '',
     };
   },
   methods: {
     changeMessage() {
       this.message = '안녕히가세요'
+    },
+    change() {
+      this.value += 1
     }
   },
   computed: {
@@ -62,7 +65,6 @@ export default {
     },
     text(newVal) {
       let check = newVal.indexOf(this.forbiddenText);
-      console.log('check', check >= 0)
       if (check >= 0) {
         this.text = newVal.replace(this.forbiddenText, '');
         alert(`${this.forbiddenText} 는 입력할 수 없습니다.`)
@@ -76,8 +78,8 @@ export default {
       // computed -> msgReversed 데이터가 변경될 때 실행
       console.log(`new reversed는 ${newMsg}`)
     },
-    count(newVal, oldVal) {
-      this.print = `${oldVal}에서 ${newVal}로 바뀌었습니다.`
+    value() {
+      this.changeValue = this.value
     }
   },
 };
