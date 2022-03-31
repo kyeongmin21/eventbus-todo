@@ -6,8 +6,13 @@
                 :bool="trueFalse" @onOff="flag"
                 :str="string" @pushEvent="push">
     </BoardChild>
+
+
     <br>
-    <span :class="classObject">www.naver.com</span>
+    <br>
+    <div :class="classObject">www.naver.com</div>
+    <div :style="styleObject">www.nate.com</div>
+
   </div>
 </template>
 
@@ -25,17 +30,18 @@ export default {
       person: '김경민',
       trueFalse: true,
       string: '뷰공부',
-      isRed: false,
+      classObject: {
+        color: true,
+        size: true
+      },
+      styleObject: {
+        color: 'red',
+        fontSize: '20px'
+      }
+
     };
   },
-  computed: {
-    classObject() {
-      return {
-        red: this.isRed,
-        green: !this.isRed
-      }
-    }
-  },
+
   methods: {
     update() {
       this.number += 1
@@ -55,12 +61,6 @@ export default {
 </script>
 
 <style>
-
-.red { color: red; }
-.green { color: green; }
-
-
-.colorAtt { color: red; }
-.weight { font-weight: 600; }
-
+.color { color: red; }
+.size { font-size: 20px; }
 </style>
