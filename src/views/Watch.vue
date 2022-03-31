@@ -4,7 +4,6 @@
     <section>
       <p>{{ message }}</p>
       <button @click="changeMessage">click</button>
-      <p>{{ update }}</p>
     </section>
 
     <section>
@@ -26,11 +25,9 @@ export default {
   data() {
     return {
       message: '안녕하세요',
-      update: '네',
       forbiddenText: '멍청이',
       text: '',
       msg: 'Hello Vue!',
-
     };
   },
   methods: {

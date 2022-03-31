@@ -1,7 +1,8 @@
 <template>
   <div>
     <h1>board</h1>
-    <a :href="getLink('kossiecoder')">유투브</a>
+    <p>{{msg}}</p>
+    <button @click="btn">버튼</button>
   </div>
 </template>
 
@@ -11,14 +12,17 @@ export default {
   components: {},
   data() {
     return {
-      link: 'https://www.naver.com',
-      youtube: 'https://www.youtube.com/'
+      msg:  '안녕하세요.'
     };
   },
-
+  computed: {
+    check() {
+      return this.checked.join('')
+    }
+  },
   methods: {
-    getLink(name) {
-      return this.youtube + name
+    btn() {
+      this.msg = '안녕히가세요'
     }
   }
 };
