@@ -2,7 +2,7 @@
   <div>
     <h1>v-bind</h1>
     <section>
-      <input :type="inputType"><br>
+      <p><input :type="inputType"></p>
       <input :value="inputValue"><br>
       <img :src="site" alt="이미지">
     </section>

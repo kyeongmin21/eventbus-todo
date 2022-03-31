@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>board</h1>
-    <input type="text" :text="text"> {{ text }}
+    <a :href="getLink('kossiecoder')">유투브</a>
   </div>
 </template>
 
@@ -11,13 +11,15 @@ export default {
   components: {},
   data() {
     return {
-      text: '',
-
+      link: 'https://www.naver.com',
+      youtube: 'https://www.youtube.com/'
     };
   },
 
   methods: {
-
+    getLink(name) {
+      return this.youtube + name
+    }
   }
 };
 </script>
