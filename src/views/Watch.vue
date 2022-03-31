@@ -17,6 +17,12 @@
       <p>{{ reversedMsg }}</p>
     </section>
 
+    <section>
+      <p>{{ count }}</p>
+      <p>{{ print }}</p>
+      <button @click="count">카운트 감소</button>
+    </section>
+
 
   </div>
 </template>
@@ -30,6 +36,8 @@ export default {
       forbiddenText: '멍청이',
       text: '',
       msg: 'Hello Vue!',
+      count: 3,
+      print: '변경전입니다.'
     };
   },
   methods: {
@@ -62,7 +70,7 @@ export default {
     },
     msg(newMsg) {
       // data -> msg 데이터가 변경될 때 실행
-      console.log(`new data는 ${newMsg}`)
+      console.log('1', `new data는 ${newMsg}`)
     },
     reversedMsg(newMsg) {
       // computed -> msgReversed 데이터가 변경될 때 실행
