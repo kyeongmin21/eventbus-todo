@@ -27,10 +27,10 @@ export default {
     console.log('mounted')
   },
   beforeDestroy() {
-    alert('beforeDestroy')
+    console.log('beforeDestroy')
   },
   destroyed() {
-    alert('destroyed')
+    console.log('destroyed')
   }
 };
 </script>
