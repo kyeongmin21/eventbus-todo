@@ -77,8 +77,6 @@ export default {
       console.log(`new reversed는 ${newMsg}`)
     },
     count(newVal, oldVal) {
-      this.count -= 1
-      console.log(this.count)
       this.print = `${oldVal}에서 ${newVal}로 바뀌었습니다.`
     }
   },
