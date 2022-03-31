@@ -3,7 +3,8 @@
     <h1>v-bind</h1>
     <section>
       <input :type="inputType"><br>
-      <input :value="inputValue">
+      <input :value="inputValue"><br>
+      <img :src="site" alt="이미지">
     </section>
 
     <section>
@@ -21,6 +22,7 @@ export default {
       inputValue: 'hello',
       link: 'https://www.naver.com',
       youtube: 'https://www.youtube.com/',
+      site: "https://t1.daumcdn.net/cfile/blog/2119CF4157F6360D2F"
     };
   },
   methods: {
