@@ -1,9 +1,17 @@
 <template>
   <div>
+    <h1>Animation</h1>
     <section>
-      <button @click="show = !show">Toggle</button>
+      <button @click="show = !show">Toggle 1</button>
       <transition name="fade">
-        <p v-if="show">hello</p>
+        <div v-if="show">Toggle 1</div>
+      </transition>
+    </section>
+
+    <section>
+      <button @click="show2 = !show2">Toggle 2</button>
+      <transition name="slide-fade">
+        <div v-if="show2">Toggle 2</div>
       </transition>
     </section>
   </div>
@@ -14,6 +22,7 @@ export default {
   data() {
     return {
       show: true,
+      show2: true,
     };
   },
   methods: {
@@ -27,4 +36,10 @@ export default {
 
 <style>
 @import "/css/style.css";
+.fade-enter-active, .fade-leave-active { transition: .5s; }
+.fade-enter, .fade-leave-to { opacity: 0;}
+
+.slide-fade-enter-active { transition: all .3s ease; }
+.slide-fade-leave-active { transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0); }
+.slide-fade-enter, .slide-fade-leave-to { transform: translateX(10px); opacity: 0;}
 </style>
