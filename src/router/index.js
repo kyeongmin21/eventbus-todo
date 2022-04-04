@@ -96,6 +96,11 @@ const routes = [
     component: () => import(/* webpackChunkName: "props" */ '@/views/Props.vue')
   },
   {
+    path: '/animation',
+    name: 'Animation',
+    component: () => import(/* webpackChunkName: "animation" */ '@/views/Animation.vue')
+  },
+  {
     path: '/board',
     name: 'Board',
     component: () => import(/* webpackChunkName: "board" */ '@/views/Board.vue')

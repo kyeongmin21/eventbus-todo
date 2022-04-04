@@ -1,5 +1,11 @@
 <template>
   <div>
+    <section>
+      <button @click="show = !show">Toggle</button>
+      <transition name="fade">
+        <p v-if="show">hello</p>
+      </transition>
+    </section>
   </div>
 </template>
 
@@ -7,7 +13,7 @@
 export default {
   data() {
     return {
-
+      show: true,
     };
   },
   methods: {
