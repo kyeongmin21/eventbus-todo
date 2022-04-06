@@ -24,6 +24,24 @@
           Mauris facilisis enim libero, at lacinia diam fermentum id.</div>
       </transition>
     </section>
+
+    <section>
+      <div id="staggered-list-demo">
+        <input v-model="query">
+        <transition-group name="staggered-fade"
+          tag="ul"
+          :css="false"
+          @before-enter="beforeEnter"
+          @enter="enter"
+          @leave="leave">
+          <li v-for="(item, index) in computedList"
+              :key="item.msg"
+              :data-index="index">
+            {{ item.msg }}
+          </li>
+        </transition-group>
+      </div>
+    </section>
   </div>
 </template>
 
