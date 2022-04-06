@@ -14,6 +14,16 @@
         <div v-if="show2">Toggle 2</div>
       </transition>
     </section>
+
+    <section>
+      <button @click="show3 = !show3">Toggle 3</button>
+      <transition name="bounce">
+        <div v-if="show3">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris facilisis enim libero, at lacinia diam fermentum id.
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          Mauris facilisis enim libero, at lacinia diam fermentum id.</div>
+      </transition>
+    </section>
   </div>
 </template>
 
@@ -23,6 +33,7 @@ export default {
     return {
       show: true,
       show2: true,
+      show3: true,
     };
   },
   methods: {
@@ -42,4 +53,12 @@ export default {
 .slide-fade-enter-active { transition: all .3s ease; }
 .slide-fade-leave-active { transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0); }
 .slide-fade-enter, .slide-fade-leave-to { transform: translateX(10px); opacity: 0;}
+
+.bounce-enter-active { animation: bounce-in .5s; }
+.bounce-leave-active { animation: bounce-in .5s reverse; }
+@keyframes bounce-in {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.5); }
+  100% { transform: scale(1); }
+}
 </style>
