@@ -24,7 +24,8 @@
       </ul>
       <ul class="category">
         <li><h2><router-link to="/animation">16. Animation</router-link></h2></li>
-        <li><h2><router-link to="/board">17. 연습판</router-link></h2></li>
+        <li><h2><router-link to="/table">17. Table</router-link></h2></li>
+        <li><h2><router-link to="/board">18. 연습판</router-link></h2></li>
       </ul>
     </div>
   </div>
