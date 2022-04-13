@@ -22,17 +22,16 @@
 
     <section>
       <h3>todo list</h3>
-      <form @submit.prevent="addNewTodo">
-        <label for="new-todo">해야할 목록 : </label>
-        <input type="text"
+      <b-form @submit.prevent="addNewTodo">
+        <b-input type="text"
                v-model="newTodoText"
                id="new-todo"
                placeholder="리스트를 적어주세요"/>
-        <button>추가</button>
-      </form>
+        <b-button variant="outline-primary">추가</b-button>
+      </b-form>
       <p v-for="(todo, index) in todos" :key="index">
         {{ todo.title }}
-        <button @click="remove(index)">삭제</button>
+        <b-button variant="outline-primary" @click="remove(index)">삭제</b-button>
       </p>
     </section>
 
