@@ -2,7 +2,7 @@
   <div>
     <h1>board</h1>
     <HelloWorld ref="usernameInput"></HelloWorld>
-    <button @click="onClick">클릭</button>
+    <b-button variant="outline-primary" @click="onClick">클릭</b-button>
   </div>
 </template>
 
