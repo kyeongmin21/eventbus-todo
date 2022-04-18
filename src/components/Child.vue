@@ -6,7 +6,7 @@
     </button>
 
     <div>공부{{ study }}</div>
-    <button @click="changeText">버튼</button>
+    <b-button variant="outline-primary" @click="changeText">버튼</b-button>
   </div>
 </template>
 

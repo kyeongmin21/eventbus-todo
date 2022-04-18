@@ -5,7 +5,7 @@
     <form>
       <InputFiled :name="name" @update-name="update"></InputFiled>
 <!--      <InputFiled :name="name" @update-name="name = $event.target.value"></InputFiled>-->
-      <button>submit</button>
+      <b-button variant="outline-primary">submit</b-button>
     </form>
     {{ name }}
   </div>
