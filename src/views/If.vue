@@ -6,7 +6,7 @@
       <h3>v-if</h3>
       <p v-if="awesome">True일 때 보여짐</p>
       <p v-else>False일 때 보여짐</p>
-      <button @click="toggleShow">버튼</button>
+      <b-button variant="outline-primary" @click="toggleShow">버튼</b-button>
       <p class="orange">false일 때 : html 렌더링 안 됨</p>
     </section>
     <section>
@@ -17,7 +17,7 @@
       </div>
       <div v-else-if="number === 2">숫자 2입니다.</div>
       <div v-else>3이상입니다.</div>
-      <button @click="increaseNumber">Increase</button> {{ number }}
+      <b-button variant="outline-primary" @click="increaseNumber">Increase</b-button> {{ number }}
     </section>
     <section>
       <h3>v-show</h3>

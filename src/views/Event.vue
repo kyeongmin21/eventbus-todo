@@ -4,18 +4,18 @@
 
     <section class="first">
       <p>{{ year }}</p>
-      <button @click="plus">더하기</button>
-      <button @click="minus">빼기</button>
+      <b-button variant="outline-primary" @click="plus">더하기</b-button>
+      <b-button variant="outline-primary" @click="minus">빼기</b-button>
     </section>
     <section>
       <form @submit.prevent="submit">
         <input type="text">
-        <button type="submit">버튼</button>
+        <b-button variant="outline-primary" type="submit">버튼</b-button>
         <p>@submit.prevent는 페이지 리로드 막는 이벤트</p>
       </form>
     </section>
     <section>
-      <button @click="show =! show">변경하기</button>
+      <b-button variant="outline-primary" @click="show =! show">변경하기</b-button>
       <transition>
         <p v-if="show">Hello Vue.js!</p>
       </transition>
