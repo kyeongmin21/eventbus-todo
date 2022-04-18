@@ -2,35 +2,35 @@
   <div>
     <h1>v-for</h1>
     <section>
-      <h3>v-for로 엘리먼트에 배열 매핑하기</h3>
+      <p>v-for로 엘리먼트에 배열 매핑하기</p>
       <div v-for="(item, index) in array" :key="index">
         {{ index + 1 }} : {{ item.fruit }}
       </div>
     </section>
 
     <section>
-      <h3>v-for와 객체</h3>
+      <p>v-for와 객체</p>
       <div v-for="(value, key, index) in object" :key="value">
         {{ value }}, {{ key }}, {{ index }}
       </div>
     </section>
 
     <section>
-      <h3>필터링 / 정렬 된 결과 표시하기</h3>
+      <p>필터링 / 정렬 된 결과 표시하기</p>
       <li v-for="n in evenNumber" :key="n">{{ n }}</li>
     </section>
 
     <section>
-      <h3>todo list</h3>
+      <p>todo list</p>
       <b-form @submit.prevent="addNewTodo">
-        <b-input type="text"
+        <b-input type="text" style="margin: 0 auto; display: inline"
                v-model="newTodoText"
-               id="new-todo"
+               id="new-todo" class="col-5 text-center"
                placeholder="리스트를 적어주세요"/>
         <b-button variant="outline-primary">추가</b-button>
       </b-form>
-      <p v-for="(todo, index) in todos" :key="index">
-        {{ todo.title }}
+      <br>
+      <p v-for="(todo, index) in todos" :key="index">{{ todo.title }}
         <b-button variant="outline-primary" @click="remove(index)">삭제</b-button>
       </p>
     </section>
