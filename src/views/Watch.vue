@@ -3,7 +3,7 @@
     <h1>Watch 속성</h1>
     <section>
       <p>{{ message }}</p>
-      <button @click="changeMessage">click</button>
+      <b-button variant="outline-primary" @click="changeMessage">click</b-button>
       <p>{{ update }}</p>
     </section>
 
@@ -20,7 +20,7 @@
     <section>
       <p>value = {{ value }}</p>
       <p>changeValue = {{ changeValue }}</p>
-      <button @click="change">변경</button>
+      <b-button variant="outline-primary" @click="change">변경</b-button>
     </section>
 
 
