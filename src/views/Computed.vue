@@ -1,7 +1,7 @@
 <template>
   <div>
     <h1>Computed 속성</h1>
-    <button @click="changeMessage">click</button>
+    <b-button variant="outline-primary" @click="changeMessage">click</b-button>
     <p>{{ reverseMessage }}</p>
     <p>{{ reverseMessage }}</p>
     <p>{{ reverseMessage }}</p>

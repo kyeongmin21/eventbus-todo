@@ -3,19 +3,19 @@
     <h1 class="test">v-model:양방향 바인딩</h1>
 
     <section class="first">
-      <h3>문자열</h3>
+      <p>문자열</p>
       <input type="text" v-model="message" />
       <span>메세지 : {{ message }}</span>
     </section>
 
     <section>
-      <h3>체크박스 : 하나의 체크박스는 단일 boolean 값을 가진다.</h3>
+      <p>체크박스 : 하나의 체크박스는 단일 boolean 값을 가진다.</p>
       <input type="checkbox" id="check" v-model="checked" />
       <label for="check">{{ checked }}</label>
     </section>
 
     <section>
-      <h3>여러개의 체크박스 : 같은 배열을 바인딩 할 수 있다.</h3>
+      <p>여러개의 체크박스 : 같은 배열을 바인딩 할 수 있다.</p>
       <input type="checkbox" id="kim" value="Kim2" v-model="checkedNames" />
       <label for="kim">Kim</label>
       <input type="checkbox" id="kyeong" value="Kyeong2" v-model="checkedNames"/>
@@ -29,7 +29,7 @@
     </section>
 
     <section>
-      <h3>라디오</h3>
+      <p>라디오</p>
       <input type="radio" id="one" value="one1" v-model="picked" />
       <label for="one">One</label>
       <input type="radio" id="two" value="two2" v-model="picked" />
@@ -38,7 +38,7 @@
     </section>
 
     <section>
-      <h3>코지코더 v-bind와 v-on을 통해 양방향</h3>
+      <p>코지코더 v-bind와 v-on을 통해 양방향</p>
       <form @submit.prevent="submit">
         <input type="text" :value="text" @keyup="updateText"><br>
         {{ text }}<br>
@@ -47,7 +47,7 @@
     </section>
 
     <section>
-      <h3>인코딩 디코딩</h3>
+      <p>인코딩 디코딩</p>
         <input type="text" v-model="memo"><br>
         <input readonly :value="encode">
         <button type="submit" @click="encoding">인코딩 버튼</button> <br>
