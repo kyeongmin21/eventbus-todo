@@ -55,11 +55,22 @@
         <button type="submit" @click="decoding">디코딩 버튼</button>
     </section>
 
+    <section>
+      <p>v-model props</p>
+      <ModelProps v-model="numData"></ModelProps>
+    </section>
+
   </div>
 </template>
 
 <script>
+import ModelProps from "@/components/ModelProps";
+
 export default {
+  name: 'Model',
+  components: {
+    ModelProps
+  },
   data() {
     return {
       message: "",
@@ -70,7 +81,8 @@ export default {
       memo: '',
       encode: '',
       decode: '',
-    };
+      numData: 33
+    }
   },
   computed: {
     check() {
