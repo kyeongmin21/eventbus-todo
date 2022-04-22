@@ -15,8 +15,6 @@ const routes = [
     name: 'Menu',
     component: () => import(/* webpackChunkName: "menu" */ '@/views/Menu.vue')
   },
-
-
   {
     path: '/data',
     name: 'Data',
