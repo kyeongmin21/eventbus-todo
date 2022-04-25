@@ -26,7 +26,6 @@ export default {
   },
   methods: {
     move (list, idx, text) {
-      console.log(list)
       if (text === 'up' && idx > 0) {
         [list[idx], list[idx - 1]] = [list[idx - 1], list[idx]]
       }

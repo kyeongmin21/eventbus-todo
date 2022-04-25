@@ -48,7 +48,6 @@ export default {
   watch: {
     value (newVal) {
       this.modalShow = newVal
-      console.log('watch',newVal)
     },
   },
   methods: {
