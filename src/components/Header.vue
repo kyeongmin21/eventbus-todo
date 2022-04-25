@@ -1,22 +1,40 @@
 <template>
-  <div>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/menu">Menu</router-link>
+  <div class="header">
+    <ul>
+      <li><router-link to="/">Home</router-link></li>
+
+      <li><router-link to="/data">1. data/methods</router-link></li>
+      <li><router-link to="/bind">2. v-bind</router-link></li>
+      <li><router-link to="/model">3. v-model</router-link></li>
+      <li><router-link to="/if">4. v-if / v-show</router-link></li>
+      <li><router-link to="/for">5. v-for</router-link></li>
+
+      <li><router-link to="/class">6. :class :style</router-link></li>
+      <li><router-link to="/computed">7. computed</router-link></li>
+      <li><router-link to="/watch">8. watch</router-link></li>
+      <li><router-link to="/compo">9. component</router-link></li>
+      <li><router-link to="/parent">10. parent</router-link></li>
+
+      <li><router-link to="/page">11. 페이지 이동</router-link></li>
+      <li><router-link to="/event">12. event</router-link></li>
+      <li><router-link to="/slot">13. slot</router-link></li>
+      <li><router-link to="/lifecycle">14. LifeCycle</router-link></li>
+      <li><router-link to="/props">15. Props</router-link></li>
+
+      <li><router-link to="/animation">16. Animation</router-link></li>
+      <li><router-link to="/table">17. Table</router-link></li>
+      <li><router-link to="/modal">18. Modal</router-link></li>
+      <li><router-link to="/updown">19. Up Down</router-link></li>
+      <li><router-link to="/board">20. 연습판</router-link></li>
+
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
-  name: "Header",
-  components: {
-
-  },
-  data() {
-    return {
-    };
-  },
-
-};
+  name: "Header"
+}
 </script>
 
 <style>

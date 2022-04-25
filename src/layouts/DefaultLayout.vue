@@ -8,12 +8,12 @@
 </template>
 
 <script>
-  import Header from '@/components/Header'
+import Header from '@/components/Header'
 
-  export default {
+export default {
   name: 'DefaultLayout',
   components: {
-    Header,
+    Header
   }
 }
 </script>

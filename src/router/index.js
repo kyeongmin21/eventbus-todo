@@ -11,11 +11,6 @@ const routes = [
     component: Home
   },
   {
-    path: '/menu',
-    name: 'Menu',
-    component: () => import(/* webpackChunkName: "menu" */ '@/views/Menu.vue')
-  },
-  {
     path: '/data',
     name: 'Data',
     component: () => import(/* webpackChunkName: "data" */ '@/views/Data.vue')
@@ -112,6 +107,11 @@ const routes = [
     path: '/modal',
     name: 'Modal',
     component: () => import(/* webpackChunkName: "modal" */ '@/views/Modal.vue')
+  },
+  {
+    path: '/updown',
+    name: 'UpDown',
+    component: () => import(/* webpackChunkName: "updown" */ '@/views/UpDown.vue')
   }
 ]
 
