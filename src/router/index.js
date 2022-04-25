@@ -35,8 +35,6 @@ const routes = [
     name: 'For',
     component: () => import(/* webpackChunkName: "for" */ '@/views/For.vue')
   },
-
-
   {
     path: '/class',
     name: 'Class',
@@ -52,7 +50,6 @@ const routes = [
     name: 'Watch',
     component: () => import(/* webpackChunkName: "watch" */ '@/views/Watch.vue')
   },
-
   {
     path: '/compo',
     name: 'Compo',
@@ -64,9 +61,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "parent" */ '@/views/Parent.vue')
   },
   {
-    path: '/page',
-    name: 'Page',
-    component: () => import(/* webpackChunkName: "page" */ '@/views/PageMove.vue')
+    path: '/updown',
+    name: 'UpDown',
+    component: () => import(/* webpackChunkName: "updown" */ '@/views/UpDown.vue')
   },
   {
     path: '/event',
@@ -107,11 +104,6 @@ const routes = [
     path: '/modal',
     name: 'Modal',
     component: () => import(/* webpackChunkName: "modal" */ '@/views/Modal.vue')
-  },
-  {
-    path: '/updown',
-    name: 'UpDown',
-    component: () => import(/* webpackChunkName: "updown" */ '@/views/UpDown.vue')
   }
 ]
 

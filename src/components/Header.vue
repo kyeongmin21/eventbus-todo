@@ -15,7 +15,7 @@
       <li><router-link to="/compo">9. component</router-link></li>
       <li><router-link to="/parent">10. parent</router-link></li>
 
-      <li><router-link to="/page">11. 페이지 이동</router-link></li>
+      <li><router-link to="/updown">11. Up Down</router-link></li>
       <li><router-link to="/event">12. event</router-link></li>
       <li><router-link to="/slot">13. slot</router-link></li>
       <li><router-link to="/lifecycle">14. LifeCycle</router-link></li>
@@ -24,7 +24,7 @@
       <li><router-link to="/animation">16. Animation</router-link></li>
       <li><router-link to="/table">17. Table</router-link></li>
       <li><router-link to="/modal">18. Modal</router-link></li>
-      <li><router-link to="/updown">19. Up Down</router-link></li>
+
       <li><router-link to="/board">20. 연습판</router-link></li>
 
     </ul>
