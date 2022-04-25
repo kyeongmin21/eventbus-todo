@@ -81,9 +81,8 @@ export default {
     remove(index) {
       return this.todos.splice(index, 1)
     }
-  },
-
-};
+  }
+}
 </script>
 
 <style>

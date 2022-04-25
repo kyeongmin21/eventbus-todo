@@ -47,11 +47,8 @@ export default {
     return {
       text: ''
     };
-  },
-  methods: {},
-  computed: {},
-
-};
+  }
+}
 </script>
 
 <style>

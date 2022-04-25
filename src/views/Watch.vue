@@ -81,8 +81,8 @@ export default {
     value() {
       this.changeValue = this.value
     }
-  },
-};
+  }
+}
 </script>
 
 <style>

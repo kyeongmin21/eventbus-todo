@@ -2,7 +2,8 @@
   <div>
     <h1>모달창 구현</h1>
     <b-button variant="outline-primary" @click="onClick">Modal</b-button>
-    <ModalCompo v-model="modalShow">
+    <ModalCompo v-model="modalShow"
+                @statChange="onClick">
 
     </ModalCompo>
   </div>
@@ -23,7 +24,9 @@ export default {
   },
   methods: {
     onClick() {
+      this.modalShow = !this.modalShow
+      console.log('클릭', this.modalShow)
     }
   }
-};
+}
 </script>

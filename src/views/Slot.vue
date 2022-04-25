@@ -34,12 +34,14 @@
 <script>
 import Button from "@/components/Button"
 import SlotChild from "@/components/SlotChild"
+
 export default {
+  name: 'Slot',
   components: {
     Button,
     SlotChild
-  },
-};
+  }
+}
 </script>
 
 <style>

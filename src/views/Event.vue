@@ -44,8 +44,8 @@ export default {
     submit() {
       alert(`전송되었습니다`)
     }
-  },
-};
+  }
+}
 </script>
 
 <style>

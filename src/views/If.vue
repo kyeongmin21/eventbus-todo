@@ -48,7 +48,7 @@ export default {
       this.number += 1
     }
   }
-};
+}
 </script>
 
 <style>
