@@ -1,7 +1,7 @@
 <template>
   <div>
-    <h1>모달창 구현</h1>
-    <b-button variant="outline-primary" @click="onClick">Modal</b-button>
+    <br><br>
+    <b-button variant="outline-primary" @click="onClick">Modal Button</b-button>
     <ModalCompo v-model="modalShow"
                 @statChange="onClick">
 

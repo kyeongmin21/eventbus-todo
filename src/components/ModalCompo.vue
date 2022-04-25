@@ -40,11 +40,6 @@ export default {
       default: false,
     },
   },
-  created () {
-    if (this.value) {
-      this.modalShow = this.value
-    }
-  },
   data () {
     return {
       modalShow: this.value
@@ -53,6 +48,7 @@ export default {
   watch: {
     value (newVal) {
       this.modalShow = newVal
+      console.log('watch',newVal)
     },
   },
   methods: {
