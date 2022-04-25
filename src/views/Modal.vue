@@ -25,7 +25,6 @@ export default {
   methods: {
     onClick() {
       this.modalShow = !this.modalShow
-      console.log('클릭', this.modalShow)
     }
   }
 }

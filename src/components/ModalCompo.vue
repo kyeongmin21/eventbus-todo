@@ -1,17 +1,31 @@
 <template>
   <div>
-    <b-modal v-model="modalShow"
+    <b-modal id="ModalCompo"
+             v-model="modalShow"
              @hide="statChange"
              footer-class="justify-content-center"
-             size="xl"
+             size="md"
              no-close-on-backdrop
              no-close-on-esc
              centered
              scrollable>
 
-      <div class="box">
+      <template #modal-header="{ close }">
+        <h5 class="modal-title">header</h5>
+        <button type="button" class="close" @click="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </template>
 
-      </div>
+      <template>
+        <p>내용</p>
+      </template>
+
+      <template #modal-footer="{ ok, cancel, hide }">
+        <b-button size="sm" variant="success" @click="ok()">확인</b-button>
+        <b-button size="sm" variant="danger" @click="cancel()">취소</b-button>
+        <b-button size="sm" variant="danger" @click="hide()">숨김</b-button>
+      </template>
 
     </b-modal>
   </div>
@@ -23,27 +37,28 @@ export default {
   props: {
     value: {
       type: Boolean,
-      default: false
-    }
+      default: false,
+    },
   },
   created () {
     if (this.value) {
       this.modalShow = this.value
     }
   },
-  data() {
+  data () {
     return {
       modalShow: this.value
     }
   },
+  watch: {
+    value (newVal) {
+      this.modalShow = newVal
+    },
+  },
   methods: {
-    statChange() {
+    statChange () {
       this.$emit('statChange')
     }
   }
 }
 </script>
-
-<style>
-.box { width: 100px; height: 100px; background: #cccccc;}
-</style>
