@@ -2,10 +2,10 @@
   <div class="updown">
     <ul>
       <li v-for="(item, idx) in fruits" :key="idx">
-        <b-button type="button" variant="outline-primary" @click="move">위</b-button>
-        <b-button type="button" variant="outline-primary" @click="move">아래</b-button>
+        <b-button type="button" variant="outline-primary" @click="move(fruits, idx, 'up')">위</b-button>
+        <b-button type="button" variant="outline-primary" @click="move(fruits, idx, 'down')">아래</b-button>
         <span>{{ item.name }}</span>
-        <b-button type="button" variant="outline-danger" @click="deleteBtn">X</b-button>
+        <b-button type="button" variant="outline-danger" @click="deleteBtn(idx)">X</b-button>
       </li>
     </ul>
   </div>
@@ -17,18 +17,26 @@ export default {
   data () {
     return {
       fruits: [
-        {idx: 1, name: 'apple'},
-        {idx: 2, name: 'banana'},
-        {idx: 3, name: 'cherry'}
+        {idx: 0, name: 'apple'},
+        {idx: 1, name: 'banana'},
+        {idx: 2, name: 'cherry'},
+        {idx: 3, name: 'berry'}
       ]
     }
   },
   methods: {
-    move () {
-      console.log('move')
+    move (list, idx, text) {
+      console.log(list)
+      if (text === 'up' && idx > 0) {
+        [list[idx], list[idx - 1]] = [list[idx - 1], list[idx]]
+      }
+      if (text === 'down' && idx < (list.length - 1)) {
+        [list[idx], list[idx + 1]] = [list[idx + 1], list[idx]]
+      }
+      list.push()
     },
-    deleteBtn () {
-
+    deleteBtn (idx) {
+      this.fruits.splice(idx, 1)
     }
   }
 }
