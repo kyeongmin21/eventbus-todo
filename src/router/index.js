@@ -107,6 +107,11 @@ const routes = [
     path: '/table',
     name: 'Table',
     component: () => import(/* webpackChunkName: "table" */ '@/views/Table.vue')
+  },
+  {
+    path: '/modal',
+    name: 'Modal',
+    component: () => import(/* webpackChunkName: "modal" */ '@/views/Modal.vue')
   }
 ]
 

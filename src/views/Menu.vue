@@ -22,7 +22,8 @@
 
         <li><router-link to="/animation">16. Animation</router-link></li>
         <li><router-link to="/table">17. Table</router-link></li>
-        <li><router-link to="/board">18. 연습판</router-link></li>
+        <li><router-link to="/modal">18. Mdoal</router-link></li>
+        <li><router-link to="/board">19. 연습판</router-link></li>
       </ul>
     </div>
   </div>
