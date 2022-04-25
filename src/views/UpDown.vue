@@ -33,6 +33,8 @@ export default {
       if (text === 'down' && idx < (list.length - 1)) {
         [list[idx], list[idx + 1]] = [list[idx + 1], list[idx]]
       }
+
+      //Vue는 배열의 변화를 감지하여 DOM을 업데이트 할 수 있다.
       list.push()
     },
     deleteBtn (idx) {
