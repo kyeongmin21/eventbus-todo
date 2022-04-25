@@ -10,16 +10,17 @@
 
 /* DefaultLayout 이랑 header */
 .baseWrap { width: 100%; height: 100vh; display: flex; overflow: hidden; }
-.header {  width: 200px;  overflow-y: scroll; border:1px solid #333; }
+.header { width: 190px; overflow-y: auto; border:1px solid #333; text-align: left; padding-left: 10px; }
 .header ul li { width: 100%; height: 40px; line-height: 40px; border-bottom: #333; }
 .wrap { flex-grow: 1; padding-top: 50px; }
 
 
+
 h1 { color: #42b983; }
 h3 { margin: 10px 0; }
-#nav a { font-weight: bold; color: #2c3e50; text-decoration: none;}
-#nav .router-link-exact-active { color: #42b983; }
 section { border-bottom: 1px solid lightgray; padding: 10px 0 20px 0; }
+
+.btn { font-size: 0.85rem; }
 .font-bold { font-weight: bold; }
 .orange { color: orange; }
 .red { color: red; }
@@ -28,3 +29,6 @@ section { border-bottom: 1px solid lightgray; padding: 10px 0 20px 0; }
 .item { transition: background-color 1s; padding: 4px 8px; } /* class에 걸어줌 */
 .is-active { background: #ffeaea;}
 .name { transition: color 1s; }
+
+#nav a { font-weight: bold; color: #2c3e50; text-decoration: none;}
+#nav .router-link-exact-active { color: #42b983; }

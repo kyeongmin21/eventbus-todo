@@ -1,6 +1,5 @@
 <template>
   <div>
-    <br><br>
     <b-button variant="outline-primary" @click="onClick">Modal Button</b-button>
     <ModalCompo v-model="modalShow"
                 @statChange="onClick">
