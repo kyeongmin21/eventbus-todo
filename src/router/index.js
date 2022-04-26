@@ -104,6 +104,16 @@ const routes = [
     path: '/modal',
     name: 'Modal',
     component: () => import(/* webpackChunkName: "modal" */ '@/views/Modal.vue')
+  },
+  {
+    path: '/kakaologin',
+    name: 'KakaoLogin',
+    component: () => import(/* webpackChunkName: "kakaologin" */ '@/views/KakaoLogin.vue')
+  },
+  {
+    path: '/naverlogin',
+    name: 'NaverLogin',
+    component: () => import(/* webpackChunkName: "naverlogin" */ '@/views/NaverLogin.vue')
   }
 ]
 
