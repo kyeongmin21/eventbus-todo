@@ -1,7 +1,9 @@
 <template>
   <div class="google">
     <h1>google</h1>
-    <div id="map" style="width:100%; height:500px"></div>
+    <button type="button" id="google-signin-btn"></button>
+    <button type="button" class="googleBtn googleLogout" @click="googleLogout">로그아웃</button>
+    <div id="map"></div>
   </div>
 </template>
 
@@ -9,15 +11,17 @@
 export default {
   name: 'GoogleLogin',
   mounted() {
-    this.initMap();
-    this.setMarker(this.mapCenter, "ce");
-    this.setMarker(this.bands, "1");
-    this.setMarker(this.bands2, "2");
+    window.gapi.signin2.render('google-signin-btn', {onsuccess: this.onSignIn})
+
+    this.setMarker(this.mapCenter, "ce")
+    this.setMarker(this.bands, "1")
+    this.setMarker(this.bands2, "2")
+    this.initMap()
   },
-  data () {
+  data() {
     return {
       map: null,
-      mapCenter: { lat: 35.105696, lng: 129.042857 },
+      mapCenter: {lat: 35.105696, lng: 129.042857},
       bands: {
         lat: 35.106187,
         lng: 129.042943,
@@ -29,6 +33,20 @@ export default {
     }
   },
   methods: {
+    onSignIn(googleUser) {
+      const profile = googleUser.getBasicProfile()
+      console.log('ID: ' + profile.getId())
+      console.log('Full Name: ' + profile.getName())
+      console.log('Given Name: ' + profile.getGivenName())
+      console.log('Family Name: ' + profile.getFamilyName())
+      console.log('Image URL: ' + profile.getImageUrl())
+      console.log('Email: ' + profile.getEmail())
+      const idToken = googleUser.getAuthResponse().id_token
+      console.log('ID Token: ' + idToken)
+    },
+    googleLogout() {
+      window.gapi.auth2.getAuthInstance().disconnect()
+    },
     initMap() {
       // eslint-disable-next-line no-undef
       this.map = new google.maps.Map(document.getElementById("map"), { //getElementById로 map id 속성의 요소를 가져온다.
@@ -54,5 +72,6 @@ export default {
       })
     }
   }
+
 }
 </script>

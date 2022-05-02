@@ -24,8 +24,8 @@
       <li><router-link to="/animation">16. Animation</router-link></li>
       <li><router-link to="/table">17. Table</router-link></li>
       <li><router-link to="/modal">18. Modal</router-link></li>
-      <li><router-link to="/kakaologin">19. KakaoLogin</router-link></li>
-      <li><router-link to="/naverlogin">20. NaverLogin</router-link></li>
+      <li><router-link to="/kakaologin">19. Kakao</router-link></li>
+      <li><router-link to="/naverlogin">20. Naver</router-link></li>
       <li><router-link to="/googlelogin">21. Google</router-link></li>
 
       <li><router-link to="/board">20. 연습판</router-link></li>
