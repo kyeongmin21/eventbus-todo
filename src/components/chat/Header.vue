@@ -5,6 +5,7 @@
         <ul class="navbar-nav mr-auto">
         </ul>
         <button type="button" class="btn btn-dark">
+          <font-awesome-icon icon="fa-solid fa-comments" class="mr-2"/>
           <span class="badge badge-danger">{{ newMessageCount }}</span>
         </button>
       </div>

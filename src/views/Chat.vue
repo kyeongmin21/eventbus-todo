@@ -2,7 +2,7 @@
   <div>
     <Header :new-message-count="newMessageCount"/>
     <div class="container mx-auto mt-5"></div>
-    <ChatList :chat-list="chatList" @read-item="readChatItem"/>
+    <ChatList :chat-list="chatList" />
   </div>
 </template>
 
@@ -27,11 +27,6 @@ export default {
         return state.chatList.filter(chat => chat.new >= 1)
       }
     })
-  },
-  methods: {
-    readChatItem(chatItem) {
-      this.chatList.filter(item => item.id === chatItem.id)[0].new = 0
-    }
   }
 }
 </script>

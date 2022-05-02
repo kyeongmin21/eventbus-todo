@@ -1,6 +1,7 @@
 <template>
   <div>
-    <button type="button" class="list-group-item text-left d-flex justify-content-between aligin-items-center">
+    <button type="button" @click="itemClick"
+            class="list-group-item text-left d-flex justify-content-between aligin-items-center">
       {{ chat.lastMessage }}
       <span class="badge badge-primary badge-pill">{{ chat.new }}</span>
     </button>
@@ -13,7 +14,7 @@ export default {
   props: ['chat'],
   methods: {
     itemClick() {
-      this.$emit('click', {...this.chat})
+      this.$store.dispatch('readChat', {...this.chat})
     }
   }
 }

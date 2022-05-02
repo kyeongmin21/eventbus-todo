@@ -2,7 +2,7 @@
   <div>
     <div class="list-group">
       <template v-for="chat in chatList">
-        <ChatListItem :chat="chat" @click="itemClick"/>
+        <ChatListItem :chat="chat" />
       </template>
     </div>
   </div>
@@ -15,10 +15,6 @@ export default {
   name: "ChatList",
   components: { ChatListItem },
   props: ['chatList'],
-  methods: {
-    itemClick(chatItem) {
-      this.$emit('read-item', chatItem)
-    }
-  }
+  methods: {}
 }
 </script>
