@@ -30,9 +30,5 @@ export default {
       return this.youtube + channel
     }
   }
-};
+}
 </script>
-
-<style>
-@import "/css/style.css";
-</style>
