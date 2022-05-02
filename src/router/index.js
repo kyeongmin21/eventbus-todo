@@ -119,6 +119,11 @@ const routes = [
     path: '/googlelogin',
     name: 'GoogleLogin',
     component: () => import(/* webpackChunkName: "googlelogin" */ '@/views/GoogleLogin.vue')
+  },
+  {
+    path: '/chatList',
+    name: 'ChatList',
+    component: () => import(/* webpackChunkName: "chatList" */ '@/components/chat/ChatList.vue')
   }
 ]
 
