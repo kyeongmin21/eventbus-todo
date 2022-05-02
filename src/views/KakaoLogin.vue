@@ -67,12 +67,9 @@ export default {
           center: new kakao.maps.LatLng(37.564343, 126.947613),
           level: 3
         }
+      // eslint-disable-next-line no-unused-vars
       const map = new kakao.maps.Map(mapContainer, mapOption)
     }
   }
 }
 </script>
-
-<style>
-@import "/css/style.css";
-</style>
