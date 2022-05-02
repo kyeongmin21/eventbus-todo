@@ -29,8 +29,9 @@
 
       <li><router-link to="/googlelogin">21. Google</router-link></li>
       <li><router-link to="/chat">22. Chat</router-link></li>
+      <li><router-link to="/login">23. Login</router-link></li>
 
-      <li><router-link to="/board">20. 연습판</router-link></li>
+      <li><router-link to="/board">24. 연습판</router-link></li>
 
     </ul>
   </div>

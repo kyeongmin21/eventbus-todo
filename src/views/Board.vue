@@ -2,7 +2,7 @@
   <div>
     <table>
       <tr>
-        <th>카테</th>
+        <th>카테고리</th>
         <th>가격</th>
       </tr>
       <tr v-for="(item, idx) in shop" :key="idx">
@@ -24,6 +24,11 @@ export default {
       shop: []
     }
   },
+  mounted () {
+    axios.get('https://my-json-server.typicode.com/zofqofhtltm8015/fs/user').then(res => {
+      console.log(res.data)
+    }).catch(err => console.log(err))
+  },
   created () {
     this.getList()
   },
@@ -32,8 +37,6 @@ export default {
       this.shop = await axios.get('https://a1065b4c-ab09-46a3-9c79-ecd531bc9ce9.mock.pstmn.io/shop')
           .then(res => {
             this.shop = res.data
-            console.log('aa', this.shop)
-            console.log('res', res)
           }).catch(err => {
         console.log('error', err)
       })
@@ -44,5 +47,6 @@ export default {
 
 <style>
 table { border-collapse: collapse; width: 100%; }
+tr {  border:1px solid red;}
 td, th { border: 1px solid #ddd; text-align: center; padding: 8px; }
 </style>
