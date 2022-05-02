@@ -43,7 +43,7 @@ export default {
       });
     },
     setMarker(Points, Label) {//지도에 마커를 찍는 함수.
-      // eslint-disable-next-line no-undef
+      // eslint-disable-next-line no-undef,no-unused-vars
       const markers = new google.maps.Marker({
         position: Points,
         map: this.map,
@@ -52,7 +52,6 @@ export default {
           color: '#fff',
         },
       })
-      console.log(markers)
     }
   }
 }
