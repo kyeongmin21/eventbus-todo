@@ -114,6 +114,11 @@ const routes = [
     path: '/naverlogin',
     name: 'NaverLogin',
     component: () => import(/* webpackChunkName: "naverlogin" */ '@/views/NaverLogin.vue')
+  },
+  {
+    path: '/googlelogin',
+    name: 'GoogleLogin',
+    component: () => import(/* webpackChunkName: "googlelogin" */ '@/views/GoogleLogin.vue')
   }
 ]
 
