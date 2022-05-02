@@ -121,9 +121,9 @@ const routes = [
     component: () => import(/* webpackChunkName: "googlelogin" */ '@/views/GoogleLogin.vue')
   },
   {
-    path: '/chatList',
-    name: 'ChatList',
-    component: () => import(/* webpackChunkName: "chatList" */ '@/components/chat/ChatList.vue')
+    path: '/chat',
+    name: 'Chat',
+    component: () => import(/* webpackChunkName: "chat" */ '@/views/Chat.vue')
   }
 ]
 

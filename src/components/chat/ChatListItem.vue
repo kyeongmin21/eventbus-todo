@@ -1,15 +1,20 @@
 <template>
   <div>
-
+    <button type="button" class="list-group-item text-left d-flex justify-content-between aligin-items-center">
+      {{ chat.lastMessage }}
+      <span class="badge badge-primary badge-pill">{{ chat.new }}</span>
+    </button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "ChatListItem"
+  name: "ChatListItem",
+  props: ['chat'],
+  methods: {
+    itemClick() {
+      this.$emit('click', {...this.chat})
+    }
+  }
 }
 </script>
-
-<style scoped>
-
-</style>
