@@ -45,7 +45,9 @@ export default {
       }
     })
 
+    // eslint-disable-next-line no-unused-vars,no-undef
     const map = new naver.maps.Map('map', {
+      // eslint-disable-next-line no-undef
       center: new naver.maps.LatLng(37.3595704, 127.105399),
       zoom: 10
     })
@@ -64,7 +66,3 @@ export default {
   }
 }
 </script>
-
-<style>
-@import "/css/style.css";
-</style>
