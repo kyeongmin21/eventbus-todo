@@ -91,11 +91,6 @@ const routes = [
     component: () => import(/* webpackChunkName: "animation" */ '@/views/Animation.vue')
   },
   {
-    path: '/board',
-    name: 'Board',
-    component: () => import(/* webpackChunkName: "board" */ '@/views/Board.vue')
-  },
-  {
     path: '/table',
     name: 'Table',
     component: () => import(/* webpackChunkName: "table" */ '@/views/Table.vue')
@@ -129,7 +124,12 @@ const routes = [
     path: '/login',
     name: 'Login',
     component: () => import(/* webpackChunkName: "login" */ '@/views/Login.vue')
-  }
+  },
+  {
+    path: '/axios',
+    name: 'Axios',
+    component: () => import(/* webpackChunkName: "axios" */ '@/views/Axios.vue')
+  },
 ]
 
 const router = new VueRouter({
