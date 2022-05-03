@@ -10,7 +10,8 @@
    </div>
 
     <b-button type="button" @click="getBtn">GET 버튼</b-button><br><br>
-    <b-button type="button" @click="postBtn">POST 버튼</b-button>
+    <b-button type="button" @click="postBtn">POST 버튼</b-button><br><br>
+    <b-button type="button" @click="putBtn">PUT 버튼</b-button><br><br>
   </div>
 </template>
 
@@ -46,6 +47,18 @@ export default {
         .catch(err => {
           console.log(err)
         })
+    },
+    putBtn() {
+      axios.put('https://reqres.in/api/users/2', {
+        "name": "morpheus",
+        "job": "zion resident"
+      })
+      .then(res => {
+        console.log(res)
+      })
+      .then(err => {
+        console.log(err)
+      })
     }
   }
 }
