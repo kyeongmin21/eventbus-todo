@@ -9,9 +9,10 @@
      <a href="https://github.com/axios/axios" target="_blank">https://github.com/axios/axios</a>
    </div>
 
-    <b-button type="button" @click="getBtn">GET 버튼</b-button><br><br>
-    <b-button type="button" @click="postBtn">POST 버튼</b-button><br><br>
-    <b-button type="button" @click="putBtn">PUT 버튼</b-button><br><br>
+    <b-button type="button" @click="getBtn">GET 버튼</b-button>
+    <b-button type="button" @click="postBtn">POST 버튼</b-button>
+    <b-button type="button" @click="putBtn">PUT 버튼</b-button>
+    <b-button type="button" @click="deleteBtn">DELETE 버튼</b-button>
   </div>
 </template>
 
@@ -59,7 +60,20 @@ export default {
       .then(err => {
         console.log(err)
       })
+    },
+    deleteBtn() {
+      axios.delete('https://reqres.in/api/users/2')
+      .then(res => {
+        console.log(res)
+      })
+      .catch(err => {
+        console.log(err)
+      })
     }
   }
 }
 </script>
+
+<style>
+button.btn.btn-secondary { display: block; margin: 20px auto;}
+</style>
