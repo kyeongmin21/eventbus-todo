@@ -1,16 +1,7 @@
 <template>
   <div>
-    <table>
-      <tr>
-        <th>카테고리</th>
-        <th>가격</th>
-      </tr>
-      <tr v-for="(item, idx) in shop" :key="idx">
-        <td>{{ item.category}}</td>
-        <td>{{ item.price}}</td>
-      </tr>
-    </table>
-    {{ this.shop }}
+    <h1>ResReq.api 사이트로 빠르고 편리하게 Restful API 테스트하기</h1>
+    <b-button type="button" @click="onClick">GET 버튼</b-button>
   </div>
 </template>
 
@@ -20,33 +11,18 @@ import axios from "axios"
 export default {
   name: "Board",
   data() {
-    return {
-      shop: []
-    }
-  },
-  mounted () {
-    axios.get('https://my-json-server.typicode.com/zofqofhtltm8015/fs/user').then(res => {
-      console.log(res.data)
-    }).catch(err => console.log(err))
-  },
-  created () {
-    this.getList()
+    return {}
   },
   methods: {
-    async getList () {
-      this.shop = await axios.get('https://a1065b4c-ab09-46a3-9c79-ecd531bc9ce9.mock.pstmn.io/shop')
-          .then(res => {
-            this.shop = res.data
-          }).catch(err => {
-        console.log('error', err)
-      })
+    onClick() {
+      axios.get("https://reqres.in/api/users?page=2")
+        .then(res => {
+          console.log(res)
+        })
+        .catch(err => {
+          console.log(err)
+        })
     }
   }
 }
 </script>
-
-<style>
-table { border-collapse: collapse; width: 100%; }
-tr {  border:1px solid red;}
-td, th { border: 1px solid #ddd; text-align: center; padding: 8px; }
-</style>
