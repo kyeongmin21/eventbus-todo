@@ -1,8 +1,8 @@
 # eventbus-todo
 
-## Project setup
+## Vuetify 설치하기
 ```
-npm install
+vue add vuetify
 ```
 
 ### Compiles and hot-reloads for development
