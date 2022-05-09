@@ -5,20 +5,12 @@
 vue add vuetify
 ```
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+## 부모 컴포넌트에서 자식컴포넌트 import 하기
+* List.vue import
+* ListAdd.vue import
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## ListAdd
+* vuetify 의 textarea 가져오기
+* 클릭 이벤트 추가
 
-### Lints and fixes files
-```
-npm run lint
-```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

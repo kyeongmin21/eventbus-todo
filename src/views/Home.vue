@@ -1,19 +1,18 @@
 <template>
-  <div class="home">
-    <v-container>
-      <v-layout row wrap>
+  <v-container>
+    <v-layout row wrap>
 
-        <v-flex xs6>
-          <List/>
-        </v-flex>
+      <v-flex xs6>
+        {{ todoList }}
+        <List/>
+      </v-flex>
 
-        <v-flex xs6>
-          <listAdd/>
-        </v-flex>
+      <v-flex xs6>
+        <listAdd @listAdd="listAdd"/>
+      </v-flex>
 
-      </v-layout>
-    </v-container>
-  </div>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
@@ -25,6 +24,16 @@ export default {
   components: {
     List,
     ListAdd
+  },
+  data() {
+    return {
+      todoList: []
+    }
+  },
+  methods: {
+    listAdd(memo) {
+      this.todoList.push({memo: memo, status: 'created'})
+    }
   }
 }
 </script>
