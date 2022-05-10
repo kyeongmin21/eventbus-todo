@@ -4,7 +4,7 @@
             :class="{'done': list.status === 'done'}"
             v-for="(list, idx) in todoList"
             :key="idx">
-      <p>{{ list.memo}}</p>
+      <p>{{ list.memo }}</p>
 
       <v-btn fab text small color="green"
              v-if="list.status === 'created'"
@@ -16,7 +16,8 @@
              @click="$emit('statusControl', idx, 'created')">
         <i class="fa-solid fa-rotate-right"></i>
       </v-btn><!-- 부활 -->
-      <v-btn fab text small color="red">
+      <v-btn fab text small color="red"
+             @click="$emit('listDelete', idx)">
         <i class="fa-solid fa-trash-can"></i>
       </v-btn><!-- 제거 -->
     </v-card>
@@ -33,6 +34,12 @@ export default {
 </script>
 
 <style scoped>
-.done { background-color: rgba(0, 0, 0, 0.1); }
-.done p { text-decoration: line-through; color: rgba(0, 0, 0, 0.5); }
+.done {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.done p {
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.5);
+}
 </style>

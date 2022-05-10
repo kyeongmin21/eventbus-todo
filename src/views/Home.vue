@@ -4,7 +4,8 @@
     <v-layout class="pa-5" row wrap >
       <v-flex xs6>
         <List :todoList="todoList"
-        @statusControl="statusControl"/>
+        @statusControl="statusControl"
+        @listDelete="listDelete"/>
       </v-flex>
 
       <v-flex xs6>
@@ -37,6 +38,9 @@ export default {
     },
     statusControl (idx, status) {
       this.todoList[idx].status = status
+    },
+    listDelete (idx) {
+      this.todoList.splice(idx, 1)
     }
   }
 }
