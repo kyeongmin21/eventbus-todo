@@ -13,4 +13,6 @@ vue add vuetify
 * vuetify 의 textarea 가져오기
 * 클릭 이벤트 추가
 
+## props로 todoList 데이터 넘겨주기
+* 할일 내용을 v-for 문으로 돌리기 / key 값 넣기
 

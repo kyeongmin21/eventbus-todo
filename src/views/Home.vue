@@ -1,10 +1,9 @@
 <template>
+  <div class="todoWrap">
   <v-container>
-    <v-layout row wrap>
-
+    <v-layout class="pa-5" row wrap >
       <v-flex xs6>
-        {{ todoList }}
-        <List/>
+        <List :todoList="todoList"/>
       </v-flex>
 
       <v-flex xs6>
@@ -13,6 +12,7 @@
 
     </v-layout>
   </v-container>
+  </div>
 </template>
 
 <script>
@@ -37,3 +37,6 @@ export default {
   }
 }
 </script>
+<style>
+.todoWrap { width: 100%; height: 100%; background-color: antiquewhite; }
+</style>

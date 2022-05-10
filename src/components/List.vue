@@ -1,12 +1,19 @@
 <template>
   <div>
-    투두 리스트
+    <v-card class="pa-3 mb-5 mr-5"
+            v-for="(list, idx) in todoList"
+            :key="idx">
+      <p>{{ list.memo}}</p>
+    </v-card>
   </div>
 </template>
 
 <script>
 export default {
-  name: "List"
+  name: "List",
+  props: [
+    "todoList"
+  ]
 }
 </script>
 
