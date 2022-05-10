@@ -41,3 +41,8 @@ npm install vuetify @fortawesome/fontawesome-free
 ## 8. 삭제기능
 * splice(시작인덱스, 갯수) 지우는 배열 메소드
 
+## 9. 편집기능
+* 부활일 때 편집버튼이 나오게 하기
+
+
+

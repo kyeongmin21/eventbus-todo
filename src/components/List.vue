@@ -11,15 +11,22 @@
              @click="$emit('statusControl', idx, 'done')">
         <i class="fa-solid fa-check"></i>
       </v-btn><!-- 완료 -->
+
       <v-btn fab text small color="blue"
              v-else
              @click="$emit('statusControl', idx, 'created')">
         <i class="fa-solid fa-rotate-right"></i>
       </v-btn><!-- 부활 -->
+
       <v-btn fab text small color="red"
              @click="$emit('listDelete', idx)">
         <i class="fa-solid fa-trash-can"></i>
       </v-btn><!-- 제거 -->
+
+      <v-btn fab text small color="yellow"
+             v-if="list.status === 'created'">
+        <i class="fas fa-edit"></i>
+      </v-btn><!-- 편집 -->
     </v-card>
   </div>
 </template>
