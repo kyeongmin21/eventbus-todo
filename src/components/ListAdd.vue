@@ -5,8 +5,8 @@
       v-model="memo"
       label="투두 리스트를 입력해주세요"
     ></v-textarea>
-    <v-btn @click="listAdd">리트스 추가</v-btn>
-    <v-btn @click="listEdit">리트스 수정</v-btn>
+    <v-btn  v-if="mode === 'add'" @click="listAdd">리트스 추가</v-btn>
+    <v-btn  v-else @click="listEdit">리트스 수정</v-btn>
   </div>
 </template>
 
@@ -18,13 +18,15 @@ export default {
   data() {
     return {
       memo: null,
-      index: null
+      index: null,
+      mode: 'add'
     }
   },
   created() {
     eventBus.$on('listEdit', (memo, idx) => {
       this.memo = memo
       this.index = idx
+      this.mode = 'edit'
     })
   },
   methods: {
@@ -42,6 +44,7 @@ export default {
       } else {
         this.$emit('listEdit', this.memo, this.index)
         this.memo = null
+        this.mode = 'add'
       }
     }
   }
