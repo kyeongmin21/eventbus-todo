@@ -38,5 +38,5 @@ export default {
 }
 </script>
 <style>
-.todoWrap { width: 100%; height: 100%; background-color: antiquewhite; }
+.todoWrap { width: 100%; height: 100%; background-color: #e5e5e5; }
 </style>
