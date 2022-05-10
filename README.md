@@ -47,6 +47,8 @@ npm install vuetify @fortawesome/fontawesome-free
 ## 10. eventBus 
 * main.js : eventBus 추가
 * List.vue : eventBus import, methods 추가
-* ListAdd.vue : eventBus import, created 훅을 이용하여 memo, idx 값 알기, 메모 리셋시켜주기
-* 
+* ListAdd.vue : eventBus import, created 훅을 이용하여 memo, idx 값 알기, 메모 리셋 시켜기
 
+## 11. 리스트 수정버튼 추가
+* ListAdd.vue : listEdit 메서드 추가 (부모 컴포넌트에게 값을 받아와야함)
+* 부모 컴포넌트: 자식으로 받은 데이터 저장

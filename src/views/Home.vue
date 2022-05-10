@@ -9,7 +9,8 @@
       </v-flex>
 
       <v-flex xs6>
-        <listAdd @listAdd="listAdd"/>
+        <listAdd @listAdd="listAdd"
+        @listEdit="listEdit"/>
       </v-flex>
 
     </v-layout>
@@ -41,6 +42,9 @@ export default {
     },
     listDelete (idx) {
       this.todoList.splice(idx, 1)
+    },
+    listEdit (memo, idx) {
+      this.todoList[idx].memo = memo
     }
   }
 }
