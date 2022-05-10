@@ -41,7 +41,7 @@ export default {
     "todoList"
   ],
   methods: {
-    listEdit (memo, idx) {
+    listEdit(memo, idx) {
       eventBus.listEdit(memo, idx)
     }
   }

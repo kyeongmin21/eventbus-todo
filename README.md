@@ -57,3 +57,11 @@ npm install vuetify @fortawesome/fontawesome-free
 ## 12. mode 를 써서 추가 & 수정버튼 둘중 하나만 보이게 하기
 * mode 가 add 면 추가 버튼 등장
 * mode 가 그 외면 수정 버튼 등장
+
+
+## 13. 제목만들고, 전체 할일, 완료된 할일, 남은 할일 표시하기
+* 전체 할일 : todoList 배열의 길이
+* 완료된 할일 : computed 속성을 이용하여 todoList 에 대해 for 반복문을 도는데, 상태가 done 인 것을 카운딩 한다.
+* 남은 할일 : 전체 할일 - 완료된 할일
+
+

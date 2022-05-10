@@ -5,8 +5,8 @@
       v-model="memo"
       label="투두 리스트를 입력해주세요"
     ></v-textarea>
-    <v-btn  v-if="mode === 'add'" @click="listAdd">리트스 추가</v-btn>
-    <v-btn  v-else @click="listEdit">리트스 수정</v-btn>
+    <v-btn v-if="mode === 'add'" @click="listAdd">리트스 추가</v-btn>
+    <v-btn v-else @click="listEdit">리트스 수정</v-btn>
   </div>
 </template>
 
@@ -50,7 +50,3 @@ export default {
   }
 }
 </script>
-
-<style scoped>
-
-</style>
