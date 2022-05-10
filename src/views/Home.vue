@@ -3,7 +3,8 @@
   <v-container>
     <v-layout class="pa-5" row wrap >
       <v-flex xs6>
-        <List :todoList="todoList"/>
+        <List :todoList="todoList"
+        @statusControl="statusControl"/>
       </v-flex>
 
       <v-flex xs6>
@@ -31,8 +32,11 @@ export default {
     }
   },
   methods: {
-    listAdd(memo) {
+    listAdd (memo) {
       this.todoList.push({memo: memo, status: 'created'})
+    },
+    statusControl (idx, status) {
+      this.todoList[idx].status = status
     }
   }
 }
