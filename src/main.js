@@ -6,6 +6,14 @@ import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 
+export const eventBus = new Vue({
+  methods: {
+    listEdit(memo, idx) {
+      this.$emit('listEdit', memo, idx)
+    }
+  }
+})
+
 new Vue({
   router,
   store,

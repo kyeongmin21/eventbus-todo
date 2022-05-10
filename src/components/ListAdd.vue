@@ -10,6 +10,8 @@
 </template>
 
 <script>
+import {eventBus} from "../main"
+
 export default {
   name: "ListAdd",
   data() {
@@ -17,12 +19,18 @@ export default {
       memo: null
     }
   },
+  created() {
+    eventBus.$on('listEdit', (memo, idx) => {
+      console.log(memo, idx)
+    })
+  },
   methods: {
     listAdd () {
       if (this.memo === null) {
         alert('할일을 입력해주세요')
       } else {
         this.$emit('listAdd', this.memo)
+        this.memo = null
       }
 
     }

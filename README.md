@@ -44,5 +44,9 @@ npm install vuetify @fortawesome/fontawesome-free
 ## 9. 편집기능
 * 부활일 때 편집버튼이 나오게 하기
 
-
+## 10. eventBus 
+* main.js : eventBus 추가
+* List.vue : eventBus import, methods 추가
+* ListAdd.vue : eventBus import, created 훅을 이용하여 memo, idx 값 알기, 메모 리셋시켜주기
+* 
 

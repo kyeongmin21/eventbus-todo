@@ -24,6 +24,7 @@
       </v-btn><!-- 제거 -->
 
       <v-btn fab text small color="yellow"
+             @click="listEdit(list.memo, idx)"
              v-if="list.status === 'created'">
         <i class="fas fa-edit"></i>
       </v-btn><!-- 편집 -->
@@ -32,11 +33,18 @@
 </template>
 
 <script>
+import {eventBus} from "../main"
+
 export default {
   name: "List",
   props: [
     "todoList"
-  ]
+  ],
+  methods: {
+    listEdit (memo, idx) {
+      eventBus.listEdit(memo, idx)
+    }
+  }
 }
 </script>
 
