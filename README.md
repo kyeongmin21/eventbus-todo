@@ -54,7 +54,7 @@ npm install vuetify @fortawesome/fontawesome-free
 * 부모 컴포넌트: 자식으로 받은 데이터 저장
 
 
-## 12. mode 를 써서 추가 & 수정버튼 둘중 하나만 보이게 하기
+## 12. mode 를 써서 추가 & 수정버튼 둘 중 하나만 보이게 하기
 * mode 가 add 면 추가 버튼 등장
 * mode 가 그 외면 수정 버튼 등장
 
